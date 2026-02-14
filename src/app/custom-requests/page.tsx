@@ -15,7 +15,7 @@ export default function CustomRequestsPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('--- CUSTOM REQUEST SUBMITTED ---');
-    console.log('To: artisan@crafthaven.com');
+    console.log('To: artisan@gurunetwork.com');
     console.log('From:', formData.email);
     console.log('Payload:', formData);
     console.log('--------------------------------');

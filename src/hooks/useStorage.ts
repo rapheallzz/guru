@@ -12,7 +12,7 @@ export function useCart() {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    const savedCart = localStorage.getItem('crafthaven-cart');
+    const savedCart = localStorage.getItem('gurunetwork-cart');
     if (savedCart) {
       setCart(JSON.parse(savedCart));
     }
@@ -20,7 +20,7 @@ export function useCart() {
 
   const saveCart = (newCart: CartItem[]) => {
     setCart(newCart);
-    localStorage.setItem('crafthaven-cart', JSON.stringify(newCart));
+    localStorage.setItem('gurunetwork-cart', JSON.stringify(newCart));
   };
 
   const generateCartItemId = (product: Product) => {
@@ -68,7 +68,7 @@ export function useWishlist() {
   const [wishlist, setWishlist] = useState<Product[]>([]);
 
   useEffect(() => {
-    const savedWishlist = localStorage.getItem('crafthaven-wishlist');
+    const savedWishlist = localStorage.getItem('gurunetwork-wishlist');
     if (savedWishlist) {
       setWishlist(JSON.parse(savedWishlist));
     }
@@ -76,7 +76,7 @@ export function useWishlist() {
 
   const saveWishlist = (newWishlist: Product[]) => {
     setWishlist(newWishlist);
-    localStorage.setItem('crafthaven-wishlist', JSON.stringify(newWishlist));
+    localStorage.setItem('gurunetwork-wishlist', JSON.stringify(newWishlist));
   };
 
   const toggleWishlist = (product: Product) => {

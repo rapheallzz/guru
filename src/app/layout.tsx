@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CraftHaven | Handmade Crafts & LED Lights",
+  title: "Guru Network | Handmade Crafts & LED Lights",
   description: "Discover unique handmade crafts and creative LED lighting for your home.",
 };
 

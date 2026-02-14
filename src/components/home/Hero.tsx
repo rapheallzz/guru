@@ -16,7 +16,7 @@ export function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl">
-          Welcome to CraftHaven – Handmade Crafts, LED Lights, and Custom Creations
+          Welcome to Guru Network – Handmade Crafts, LED Lights, and Custom Creations
         </h1>
         <p className="text-xl md:text-2xl text-stone-200 mb-10 max-w-2xl">
           Emphasizing natural materials and unique custom options for your home and lifestyle.

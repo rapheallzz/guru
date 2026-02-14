@@ -50,7 +50,7 @@ export default function BlogPostPage() {
               <div className="w-16 h-16 bg-stone-200 rounded-full flex-shrink-0" />
               <div>
                 <p className="font-bold text-stone-900">{post.author}</p>
-                <p className="text-sm text-stone-500 italic">Lead artisan and curator at CraftHaven. Passionate about sustainable materials and traditional techniques.</p>
+                <p className="text-sm text-stone-500 italic">Lead artisan and curator at Guru Network. Passionate about sustainable materials and traditional techniques.</p>
               </div>
             </div>
           </div>

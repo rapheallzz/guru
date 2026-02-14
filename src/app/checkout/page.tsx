@@ -73,7 +73,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-stone-500">Account Name:</span>
-                    <span className="font-bold">CraftHaven Ltd</span>
+                    <span className="font-bold">Guru Network Ltd</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-stone-500">Account Number:</span>

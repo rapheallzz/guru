@@ -19,7 +19,7 @@ export function Newsletter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="lg:max-w-md">
-            <h2 className="text-3xl font-bold mb-4">Join the CraftHaven Club</h2>
+            <h2 className="text-3xl font-bold mb-4">Join the Guru Network Club</h2>
             <p className="text-emerald-100">
               Sign up for craft tips, exclusive deals, and early access to our new collections. Plus, get 10% off your first order!
             </p>

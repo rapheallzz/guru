@@ -9,7 +9,7 @@ export default function MerchPage() {
     <div className="bg-white min-h-screen pb-20">
       <div className="bg-stone-50 border-b border-stone-100 py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-stone-900 mb-4 uppercase tracking-tight">CraftHaven Merch</h1>
+          <h1 className="text-4xl font-bold text-stone-900 mb-4 uppercase tracking-tight">Guru Network Merch</h1>
           <p className="text-lg text-stone-600">
             Show your love for handmade crafts with our branded accessories.
           </p>

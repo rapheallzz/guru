@@ -9,7 +9,7 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <Link href="/" className="text-2xl font-bold tracking-tight text-white">
-              CRAFT<span className="text-emerald-500">HAVEN</span>
+              GURU<span className="text-emerald-500">NETWORK</span>
             </Link>
             <p className="text-stone-400 text-sm">
               Handcrafted with passion, illuminated with care. We bring you the finest handmade crafts and unique LED creations from local artisans.
@@ -46,9 +46,9 @@ export function Footer() {
               <div>
                 <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Contact</h3>
                 <ul className="mt-4 space-y-4">
-                  <li className="flex items-center text-sm"><MapPin className="w-4 h-4 mr-2" /> 123 Artisan Way, Craft Town</li>
+                  <li className="flex items-center text-sm"><MapPin className="w-4 h-4 mr-2" /> 123 Artisan Way, Guru City</li>
                   <li className="flex items-center text-sm"><Phone className="w-4 h-4 mr-2" /> 0333 123 4567</li>
-                  <li className="flex items-center text-sm"><Mail className="w-4 h-4 mr-2" /> hello@crafthaven.com</li>
+                  <li className="flex items-center text-sm"><Mail className="w-4 h-4 mr-2" /> hello@gurunetwork.com</li>
                 </ul>
               </div>
             </div>
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-stone-500">
-            &copy; {new Date().getFullYear()} CraftHaven Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} Guru Network Ltd. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <Link href="/privacy" className="text-xs hover:text-white">Privacy Policy</Link>

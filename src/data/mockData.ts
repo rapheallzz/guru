@@ -128,7 +128,7 @@ export const products: Product[] = [
   },
   {
     id: '11',
-    name: 'CraftHaven Enamel Pin Set',
+    name: 'Guru Network Enamel Pin Set',
     description: 'A set of three high-quality enamel pins featuring our signature pottery, LED bulb, and tools icons.',
     price: 15.00,
     category: 'Merch',
