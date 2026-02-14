@@ -7,22 +7,24 @@ export function FeaturedProducts() {
   const featured = products.filter(p => p.featured).slice(0, 4);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="relative z-20 -mt-20 lg:-mt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-end mb-10">
-          <div>
-            <h2 className="text-3xl font-bold text-stone-900 mb-2">Featured Products</h2>
-            <p className="text-stone-600">Discover our most popular handcrafted items and lighting.</p>
+        <div className="bg-white p-8 lg:p-12 shadow-2xl rounded-sm">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+            <div>
+              <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-stone-400 mb-2">Our Curation</h2>
+              <h3 className="text-3xl lg:text-4xl font-black uppercase text-stone-900">Featured Products</h3>
+            </div>
+            <Link href="/shop" className="text-xs font-bold uppercase tracking-widest text-emerald-800 border-b-2 border-emerald-800 pb-1 hover:text-emerald-600 hover:border-emerald-600 transition-colors">
+              View all products
+            </Link>
           </div>
-          <Link href="/shop" className="text-emerald-700 font-semibold hover:underline">
-            View all products →
-          </Link>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featured.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+            {featured.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
