@@ -10,10 +10,9 @@ import { useRouter } from 'next/navigation';
 const navigation = [
   { name: 'Home', href: '/' },
   {
-    name: 'Shop',
+    name: 'Shop All',
     href: '/shop',
     subItems: [
-      { name: 'All Products', href: '/shop' },
       { name: 'Craft Works', href: '/shop?category=Craft+Works' },
       { name: 'LED Lights', href: '/shop?category=LED+Lights' },
     ]
@@ -43,7 +42,7 @@ export function Header() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/shop?search=${encodeURIComponent(searchQuery.trim())}`);
+      router.push(`/shop?q=${encodeURIComponent(searchQuery.trim())}`);
       setIsSearchOpen(false);
       setIsMenuOpen(false);
     }
@@ -58,123 +57,124 @@ export function Header() {
   }, []);
 
   return (
-    <header className="w-full z-50">
+    <>
       {/* Announcement Bar */}
-      <div className="bg-stone-900 text-white py-2.5 text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-center px-4">
-        Subscribe & Save 20% + Free delivery over £50
+      <div className="bg-emerald-900 text-white py-3 text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-center px-4">
+        Free delivery over £50
       </div>
 
-      <nav className={cn(
-        "bg-white transition-all duration-300 border-b border-stone-100",
-        isScrolled ? "sticky top-0 shadow-sm" : ""
+      <header className={cn(
+        "bg-white transition-all duration-300 sticky top-0 z-50",
+        isScrolled ? "shadow-md" : "border-b border-stone-100"
       )}>
-        {/* Main Header Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20 lg:h-24">
-            {/* Left: Search (Desktop) / Menu (Mobile) */}
-            <div className="flex-1 flex items-center">
-              <div className="hidden lg:block relative group">
-                {isSearchOpen ? (
-                  <form onSubmit={handleSearch} className="flex items-center">
-                    <input
-                      autoFocus
-                      type="text"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="SEARCH..."
-                      className="w-48 bg-transparent border-b border-stone-900 py-1 text-xs font-bold uppercase tracking-widest focus:outline-none"
-                    />
-                    <button type="button" onClick={() => setIsSearchOpen(false)} className="ml-2">
-                      <X className="w-4 h-4 text-stone-400" />
+        <nav>
+          {/* Main Header Section */}
+          <div className="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div className="flex justify-between items-center h-24 lg:h-32">
+              {/* Left: Search (Desktop) / Menu (Mobile) */}
+              <div className="flex-1 flex items-center">
+                <div className="hidden lg:block">
+                  {isSearchOpen ? (
+                    <form onSubmit={handleSearch} className="flex items-center">
+                      <input
+                        autoFocus
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="SEARCH YOUR ITEMS..."
+                        className="w-64 bg-transparent border-b border-stone-900 py-2 text-[11px] font-bold uppercase tracking-widest focus:outline-none"
+                      />
+                      <button type="button" onClick={() => setIsSearchOpen(false)} className="ml-4">
+                        <X className="w-5 h-5 text-stone-400" />
+                      </button>
+                    </form>
+                  ) : (
+                    <button
+                      onClick={() => setIsSearchOpen(true)}
+                      className="flex items-center text-stone-800 hover:text-emerald-800 transition-colors group"
+                    >
+                      <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                      <span className="ml-3 text-[11px] font-bold uppercase tracking-[0.2em]">Search</span>
                     </button>
-                  </form>
-                ) : (
-                  <button
-                    onClick={() => setIsSearchOpen(true)}
-                    className="flex items-center text-stone-600 hover:text-stone-900 transition-colors"
-                  >
-                    <Search className="w-5 h-5" />
-                    <span className="ml-2 text-xs font-bold uppercase tracking-widest">Search</span>
-                  </button>
-                )}
-              </div>
-              <button
-                className="lg:hidden p-2 text-stone-900"
-                onClick={() => setIsMenuOpen(true)}
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Center: Logo */}
-            <div className="flex-shrink-0 flex flex-col items-center">
-              <Link href="/" className="text-center group">
-                <div className="text-2xl lg:text-3xl font-black tracking-[0.3em] text-stone-900 flex flex-col items-center">
-                  <span className="font-playfair italic font-medium text-lg lg:text-xl tracking-normal text-stone-500 mb-[-4px]">The</span>
-                  GURU NETWORK
-                </div>
-              </Link>
-            </div>
-
-            {/* Right: Account & Cart */}
-            <div className="flex-1 flex items-center justify-end space-x-4 lg:space-x-8">
-              <Link href="/login" className="hidden lg:flex items-center text-stone-600 hover:text-stone-900 transition-colors">
-                <span className="mr-2 text-xs font-bold uppercase tracking-widest">Log in</span>
-                <User className="w-5 h-5" />
-              </Link>
-              <Link href="/cart" className="flex items-center text-stone-600 hover:text-stone-900 transition-colors relative">
-                <span className="hidden lg:block mr-2 text-xs font-bold uppercase tracking-widest">Cart</span>
-                <div className="relative">
-                  <ShoppingCart className="w-5 h-5 text-stone-900" />
-                  {totalItems > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-emerald-700 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
-                      {totalItems}
-                    </span>
                   )}
                 </div>
-              </Link>
+                <button
+                  className="lg:hidden p-2 text-stone-900"
+                  onClick={() => setIsMenuOpen(true)}
+                >
+                  <Menu className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Center: Logo */}
+              <div className="flex-shrink-0">
+                <Link href="/" className="text-center group">
+                  <div className="text-3xl lg:text-4xl font-black tracking-[0.4em] text-stone-900">
+                    GURU NETWORK
+                  </div>
+                </Link>
+              </div>
+
+              {/* Right: Account & Cart */}
+              <div className="flex-1 flex items-center justify-end space-x-4 lg:space-x-8">
+                <Link href="/login" className="hidden lg:flex items-center text-stone-600 hover:text-stone-900 transition-colors">
+                  <span className="mr-2 text-xs font-bold uppercase tracking-widest">Log in</span>
+                  <User className="w-5 h-5" />
+                </Link>
+                <Link href="/cart" className="flex items-center text-stone-600 hover:text-stone-900 transition-colors relative">
+                  <span className="hidden lg:block mr-2 text-xs font-bold uppercase tracking-widest">Cart</span>
+                  <div className="relative">
+                    <ShoppingCart className="w-5 h-5 text-stone-900" />
+                    {totalItems > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-emerald-700 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                        {totalItems}
+                      </span>
+                    )}
+                  </div>
+                </Link>
+              </div>
             </div>
-          </div>
 
-          {/* Bottom: Desktop Navigation Links */}
-          <div className="hidden lg:flex justify-center items-center pb-6 space-x-10">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                {item.subItems ? (
-                  <div className="flex items-center cursor-pointer py-2">
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-stone-600 group-hover:text-stone-900 transition-colors">
-                      {item.name}
-                    </span>
-                    <ChevronDown className="ml-1 w-3 h-3 text-stone-400 group-hover:text-stone-900 transition-colors" />
+            {/* Bottom: Desktop Navigation Links */}
+            <div className="hidden lg:flex justify-center items-center pb-8 space-x-12">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  {item.subItems ? (
+                    <div className="flex items-center cursor-pointer py-2">
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-stone-600 group-hover:text-stone-900 transition-colors">
+                        {item.name}
+                      </span>
+                      <ChevronDown className="ml-1 w-3 h-3 text-stone-400 group-hover:text-stone-900 transition-colors" />
 
-                    {/* Mega-ish Dropdown */}
-                    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <div className="bg-white border border-stone-100 shadow-2xl py-4 min-w-[200px]">
-                        {item.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-stone-600 hover:bg-stone-50 hover:text-emerald-700 transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
+                      {/* Mega-ish Dropdown */}
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div className="bg-white border border-stone-100 shadow-2xl py-4 min-w-[200px]">
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-stone-600 hover:bg-stone-50 hover:text-emerald-700 transition-colors"
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="py-2 text-xs font-bold uppercase tracking-[0.2em] text-stone-600 hover:text-stone-900 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="py-2 text-xs font-bold uppercase tracking-[0.2em] text-stone-600 hover:text-stone-900 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
       {/* Mobile Side Menu */}
       <div
@@ -240,7 +240,7 @@ export function Header() {
             </div>
 
             <div className="p-8 border-t border-stone-100 bg-stone-50 space-y-4">
-              <Link href="/login" className="flex items-center text-stone-900 font-bold uppercase tracking-widest text-xs">
+              <Link href="/login" className="flex items-center text-stone-900 font-bold uppercase tracking-widest text-xs" onClick={() => setIsMenuOpen(false)}>
                 <User className="w-5 h-5 mr-3" />
                 Account
               </Link>
@@ -252,7 +252,7 @@ export function Header() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="SEARCH..."
+                  placeholder="SEARCH YOUR ITEMS..."
                   className="w-full bg-transparent border-b border-stone-200 py-2 pl-8 text-xs font-bold uppercase tracking-widest focus:outline-none focus:border-stone-900"
                 />
               </form>
@@ -260,6 +260,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
