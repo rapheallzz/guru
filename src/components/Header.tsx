@@ -35,19 +35,6 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const { totalItems } = useStore();
-  const router = useRouter();
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/shop?q=${encodeURIComponent(searchQuery.trim())}`);
-      setIsSearchOpen(false);
-      setIsMenuOpen(false);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,43 +59,8 @@ export function Header() {
           {/* Main Header Section */}
           <div className="max-w-screen-2xl mx-auto px-6 lg:px-12">
             <div className="flex justify-between items-center h-24 lg:h-32">
-              {/* Left: Search (Desktop) / Menu (Mobile) */}
-              <div className="flex-1 flex items-center">
-                <div className="hidden lg:block">
-                  {isSearchOpen ? (
-                    <form onSubmit={handleSearch} className="flex items-center">
-                      <input
-                        autoFocus
-                        type="text"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="SEARCH YOUR ITEMS..."
-                        className="w-64 bg-transparent border-b border-zinc-700 py-2 text-[11px] font-bold uppercase tracking-widest focus:outline-none text-white"
-                      />
-                      <button type="button" onClick={() => setIsSearchOpen(false)} className="ml-4">
-                        <X className="w-5 h-5 text-zinc-500" />
-                      </button>
-                    </form>
-                  ) : (
-                    <button
-                      onClick={() => setIsSearchOpen(true)}
-                      className="flex items-center text-zinc-400 hover:text-white transition-colors group"
-                    >
-                      <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                      <span className="ml-3 text-[11px] font-bold uppercase tracking-[0.2em]">Search</span>
-                    </button>
-                  )}
-                </div>
-                <button
-                  className="lg:hidden p-2 text-white"
-                  onClick={() => setIsMenuOpen(true)}
-                >
-                  <Menu className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Center: Logo */}
-              <div className="flex-shrink-0">
+              {/* Left: Logo */}
+              <div className="flex-shrink-0 flex items-center">
                 <Link href="/" className="flex items-center justify-center">
                   <div className="relative w-20 h-20 lg:w-28 lg:h-28">
                     <Image
@@ -122,62 +74,52 @@ export function Header() {
                 </Link>
               </div>
 
-              {/* Right: Account & Cart */}
-              <div className="flex-1 flex items-center justify-end space-x-4 lg:space-x-8">
-                <Link href="/login" className="hidden lg:flex items-center text-zinc-400 hover:text-white transition-colors">
-                  <span className="mr-2 text-xs font-bold uppercase tracking-widest">Log in</span>
-                  <User className="w-5 h-5" />
-                </Link>
-                <Link href="/cart" className="flex items-center text-zinc-400 hover:text-white transition-colors relative">
-                  <span className="hidden lg:block mr-2 text-xs font-bold uppercase tracking-widest">Cart</span>
-                  <div className="relative">
-                    <ShoppingCart className="w-5 h-5 text-white" />
-                    {totalItems > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-zinc-100 text-black text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
-                        {totalItems}
-                      </span>
-                    )}
-                  </div>
-                </Link>
-              </div>
-            </div>
+              {/* Right: Desktop Navigation Links & Mobile Menu Button */}
+              <div className="flex flex-1 items-center justify-end">
+                <div className="hidden lg:flex items-center space-x-10">
+                  {navigation.map((item) => (
+                    <div key={item.name} className="relative group">
+                      {item.subItems ? (
+                        <div className="flex items-center cursor-pointer py-2">
+                          <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 group-hover:text-white transition-colors">
+                            {item.name}
+                          </span>
+                          <ChevronDown className="ml-1 w-3 h-3 text-zinc-600 group-hover:text-white transition-colors" />
 
-            {/* Bottom: Desktop Navigation Links */}
-            <div className="hidden lg:flex justify-center items-center pb-8 space-x-12">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.subItems ? (
-                    <div className="flex items-center cursor-pointer py-2">
-                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 group-hover:text-white transition-colors">
-                        {item.name}
-                      </span>
-                      <ChevronDown className="ml-1 w-3 h-3 text-zinc-600 group-hover:text-white transition-colors" />
-
-                      {/* Mega-ish Dropdown */}
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div className="bg-black border border-zinc-800 shadow-2xl py-4 min-w-[200px]">
-                          {item.subItems.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
-                              className="block px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-zinc-400 hover:bg-zinc-900 hover:text-white transition-colors"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
+                          {/* Mega-ish Dropdown */}
+                          <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div className="bg-black border border-zinc-800 shadow-2xl py-4 min-w-[200px]">
+                              {item.subItems.map((subItem) => (
+                                <Link
+                                  key={subItem.name}
+                                  href={subItem.href}
+                                  className="block px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-zinc-400 hover:bg-zinc-900 hover:text-white transition-colors"
+                                >
+                                  {subItem.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="py-2 text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      )}
                     </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="py-2 text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
+                  ))}
                 </div>
-              ))}
+
+                <button
+                  className="lg:hidden p-2 text-white"
+                  onClick={() => setIsMenuOpen(true)}
+                >
+                  <Menu className="w-6 h-6" />
+                </button>
+              </div>
             </div>
           </div>
         </nav>
@@ -253,24 +195,6 @@ export function Header() {
               ))}
             </div>
 
-            <div className="p-8 border-t border-zinc-900 bg-zinc-950 space-y-4">
-              <Link href="/login" className="flex items-center text-zinc-400 font-bold uppercase tracking-widest text-xs" onClick={() => setIsMenuOpen(false)}>
-                <User className="w-5 h-5 mr-3" />
-                Account
-              </Link>
-              <form onSubmit={handleSearch} className="relative">
-                 <button type="submit">
-                   <Search className="absolute left-0 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" />
-                 </button>
-                 <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="SEARCH YOUR ITEMS..."
-                  className="w-full bg-transparent border-b border-zinc-800 py-2 pl-8 text-xs font-bold uppercase tracking-widest focus:outline-none focus:border-zinc-500 text-white"
-                />
-              </form>
-            </div>
           </div>
         </div>
       </div>
