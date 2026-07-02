@@ -49,20 +49,9 @@ export function ProductCard({ product }: { product: Product }) {
           </h3>
         </Link>
 
-        <p className="text-stone-600 text-sm mb-4 line-clamp-2 h-10">
+        <p className="text-stone-600 text-sm line-clamp-2 h-10">
           {product.description}
         </p>
-
-        <div className="flex items-center justify-between">
-          <span className="text-lg font-bold text-stone-900">£{product.price.toFixed(2)}</span>
-          <button
-            onClick={() => addToCart(product)}
-            className="flex items-center space-x-1 px-3 py-1.5 bg-stone-900 text-white text-sm font-medium rounded hover:bg-zinc-700 transition-colors"
-          >
-            <ShoppingCart className="w-4 h-4" />
-            <span>Add</span>
-          </button>
-        </div>
       </div>
     </div>
   );
