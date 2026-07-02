@@ -19,7 +19,7 @@ export default function CartPage() {
         <p className="text-stone-600 mb-8">Looks like you haven&apos;t added anything to your cart yet.</p>
         <Link
           href="/shop"
-          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-emerald-700 transition-colors"
+          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-zinc-700 transition-colors"
         >
           Start Shopping
         </Link>
@@ -44,7 +44,7 @@ export default function CartPage() {
                     </div>
 
                     <div className="flex-grow text-center sm:text-left">
-                      <Link href={`/product/${item.id}`} className="text-lg font-bold text-stone-900 hover:text-emerald-700 transition-colors">
+                      <Link href={`/product/${item.id}`} className="text-lg font-bold text-stone-900 hover:text-zinc-700 transition-colors">
                         {item.name}
                       </Link>
                       <p className="text-sm text-stone-500 mb-2">{item.category}</p>
@@ -60,7 +60,7 @@ export default function CartPage() {
                       )}
 
                       {item.subscriptionFrequency && (
-                        <div className="flex items-center gap-1.5 mb-4 justify-center sm:justify-start text-emerald-700">
+                        <div className="flex items-center gap-1.5 mb-4 justify-center sm:justify-start text-zinc-700">
                           <RefreshCw className="w-3.5 h-3.5" />
                           <span className="text-xs font-bold uppercase tracking-wider">
                             Subscribed: every {item.subscriptionFrequency}
@@ -72,14 +72,14 @@ export default function CartPage() {
                         <div className="flex items-center border border-stone-200 rounded">
                           <button
                             onClick={() => updateQuantity(item.cartItemId, item.quantity - 1)}
-                            className="p-1 hover:text-emerald-700 transition-colors"
+                            className="p-1 hover:text-zinc-700 transition-colors"
                           >
                             <Minus className="w-4 h-4" />
                           </button>
                           <span className="w-8 text-center text-sm font-bold">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.cartItemId, item.quantity + 1)}
-                            className="p-1 hover:text-emerald-700 transition-colors"
+                            className="p-1 hover:text-zinc-700 transition-colors"
                           >
                             <Plus className="w-4 h-4" />
                           </button>
@@ -126,7 +126,7 @@ export default function CartPage() {
 
               <Link
                 href="/checkout"
-                className="w-full bg-emerald-700 text-white font-bold py-4 rounded-md hover:bg-emerald-800 transition-all flex items-center justify-center space-x-2"
+                className="w-full bg-zinc-700 text-white font-bold py-4 rounded-md hover:bg-zinc-800 transition-all flex items-center justify-center space-x-2"
               >
                 <span>Proceed to Checkout</span>
                 <ArrowRight className="w-5 h-5" />

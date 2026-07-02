@@ -68,7 +68,7 @@ function ShopContent() {
                     onClick={() => setSelectedCategory(cat)}
                     className={cn(
                       "block w-full text-left py-1 text-sm transition-colors",
-                      selectedCategory === cat ? "text-emerald-700 font-bold" : "text-stone-600 hover:text-stone-900"
+                      selectedCategory === cat ? "text-zinc-700 font-bold" : "text-stone-600 hover:text-stone-900"
                     )}
                   >
                     {cat}
@@ -87,7 +87,7 @@ function ShopContent() {
                   step="10"
                   value={priceRange[1]}
                   onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
-                  className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-emerald-700"
+                  className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-zinc-700"
                 />
                 <div className="flex justify-between text-xs text-stone-500 font-medium">
                   <span>£0</span>
@@ -108,7 +108,7 @@ function ShopContent() {
                   placeholder="Search products..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-stone-200 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                  className="w-full pl-10 pr-4 py-2 border border-stone-200 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-500 transition-all"
                 />
               </div>
 
@@ -125,7 +125,7 @@ function ShopContent() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="appearance-none bg-white border border-stone-200 px-4 py-2 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm font-medium cursor-pointer"
+                    className="appearance-none bg-white border border-stone-200 px-4 py-2 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-500 text-sm font-medium cursor-pointer"
                   >
                     <option>Featured</option>
                     <option>Popularity</option>
@@ -149,7 +149,7 @@ function ShopContent() {
                         onClick={() => setSelectedCategory(cat)}
                         className={cn(
                           "px-4 py-2 rounded-full text-sm font-medium transition-colors",
-                          selectedCategory === cat ? "bg-emerald-700 text-white" : "bg-white text-stone-600 border border-stone-200"
+                          selectedCategory === cat ? "bg-zinc-700 text-white" : "bg-white text-stone-600 border border-stone-200"
                         )}
                       >
                         {cat}
@@ -176,7 +176,7 @@ function ShopContent() {
                     setSelectedCategory('All');
                     setPriceRange([0, 200]);
                   }}
-                  className="mt-4 text-emerald-700 font-bold hover:underline"
+                  className="mt-4 text-zinc-700 font-bold hover:underline"
                 >
                   Clear all filters
                 </button>

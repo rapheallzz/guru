@@ -53,7 +53,7 @@ export default function FAQsPage() {
                 className="w-full flex items-center justify-between p-6 text-left hover:bg-stone-50 transition-colors"
               >
                 <span className="font-bold text-stone-900">{faq.question}</span>
-                {openIdx === idx ? <ChevronUp className="w-5 h-5 text-emerald-700" /> : <ChevronDown className="w-5 h-5 text-stone-400" />}
+                {openIdx === idx ? <ChevronUp className="w-5 h-5 text-zinc-700" /> : <ChevronDown className="w-5 h-5 text-stone-400" />}
               </button>
               {openIdx === idx && (
                 <div className="px-6 pb-6 text-stone-600 leading-relaxed">
@@ -64,12 +64,12 @@ export default function FAQsPage() {
           ))}
         </div>
 
-        <div className="mt-16 p-8 bg-emerald-50 rounded-2xl text-center">
+        <div className="mt-16 p-8 bg-zinc-50 rounded-2xl text-center">
           <h2 className="text-xl font-bold text-stone-900 mb-2">Still have questions?</h2>
           <p className="text-stone-600 mb-6">We're happy to help you with anything else you need.</p>
           <a
             href="/contact"
-            className="inline-block px-8 py-3 bg-emerald-700 text-white font-bold rounded-md hover:bg-emerald-800 transition-colors"
+            className="inline-block px-8 py-3 bg-zinc-700 text-white font-bold rounded-md hover:bg-zinc-800 transition-colors"
           >
             Contact Our Team
           </a>

@@ -30,7 +30,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="p-4">
         <div className="flex justify-between items-start mb-1">
-          <p className="text-xs text-emerald-700 font-semibold uppercase tracking-wider">{product.category}</p>
+          <p className="text-xs text-zinc-700 font-semibold uppercase tracking-wider">{product.category}</p>
           <button
             onClick={() => toggleWishlist(product)}
             className={cn(
@@ -44,7 +44,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
 
         <Link href={`/product/${product.id}`}>
-          <h3 className="text-stone-900 font-medium mb-1 group-hover:text-emerald-700 transition-colors line-clamp-1">
+          <h3 className="text-stone-900 font-medium mb-1 group-hover:text-zinc-700 transition-colors line-clamp-1">
             {product.name}
           </h3>
         </Link>
@@ -57,7 +57,7 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="text-lg font-bold text-stone-900">£{product.price.toFixed(2)}</span>
           <button
             onClick={() => addToCart(product)}
-            className="flex items-center space-x-1 px-3 py-1.5 bg-stone-900 text-white text-sm font-medium rounded hover:bg-emerald-700 transition-colors"
+            className="flex items-center space-x-1 px-3 py-1.5 bg-stone-900 text-white text-sm font-medium rounded hover:bg-zinc-700 transition-colors"
           >
             <ShoppingCart className="w-4 h-4" />
             <span>Add</span>

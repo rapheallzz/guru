@@ -3,7 +3,7 @@ export default function PrivacyPage() {
     <div className="max-w-3xl mx-auto px-4 py-20">
       <h1 className="text-4xl font-bold mb-8 uppercase tracking-tight">Privacy Policy</h1>
       <div className="prose prose-stone max-w-none text-stone-600">
-        <p className="mb-4">At Guru Network, we value your privacy. As a guest-only shop, we only collect the information necessary to process your orders and provide customer support.</p>
+        <p className="mb-4">At Kraft Minds by Guru, we value your privacy. As a guest-only shop, we only collect the information necessary to process your orders and provide customer support.</p>
         <h2 className="text-2xl font-bold text-stone-900 mt-8 mb-4">Information We Collect</h2>
         <ul className="list-disc pl-6 mb-4">
           <li>Contact information (email address)</li>

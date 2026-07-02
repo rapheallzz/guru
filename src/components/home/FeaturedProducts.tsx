@@ -15,7 +15,7 @@ export function FeaturedProducts() {
               <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-stone-400 mb-2">Our Curation</h2>
               <h3 className="text-3xl lg:text-4xl font-black uppercase text-stone-900">Featured Products</h3>
             </div>
-            <Link href="/shop" className="text-xs font-bold uppercase tracking-widest text-emerald-800 border-b-2 border-emerald-800 pb-1 hover:text-emerald-600 hover:border-emerald-600 transition-colors">
+            <Link href="/shop" className="text-xs font-bold uppercase tracking-widest text-zinc-800 border-b-2 border-zinc-800 pb-1 hover:text-zinc-600 hover:border-zinc-600 transition-colors">
               View all products
             </Link>
           </div>

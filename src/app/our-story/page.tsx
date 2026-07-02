@@ -18,7 +18,7 @@ export default function OurStoryPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-stone lg:prose-xl max-w-none text-stone-600">
             <p className="mb-8">
-              Guru Network was born from a desire to celebrate the beauty of the handmade. In an age of mass production and digital noise, we believe there is something profoundly grounding about an object that has been shaped by human hands.
+              Kraft Minds by Guru was born from a desire to celebrate the beauty of the handmade. In an age of mass production and digital noise, we believe there is something profoundly grounding about an object that has been shaped by human hands.
             </p>
             <div className="relative h-96 mb-12 rounded-2xl overflow-hidden shadow-lg">
               <Image

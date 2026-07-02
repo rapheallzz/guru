@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Search, ShoppingCart, User, Menu, X, ChevronDown } from 'lucide-react';
 import { useStore } from '@/hooks/useStore';
 import { cn } from '@/utils/cn';
@@ -59,13 +60,13 @@ export function Header() {
   return (
     <>
       {/* Announcement Bar */}
-      <div className="bg-emerald-900 text-white py-3 text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-center px-4">
+      <div className="bg-black text-zinc-400 py-3 text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-center px-4 border-b border-zinc-800">
         Free delivery over £50
       </div>
 
       <header className={cn(
-        "bg-white transition-all duration-300 sticky top-0 z-50",
-        isScrolled ? "shadow-md" : "border-b border-stone-100"
+        "bg-black transition-all duration-300 sticky top-0 z-50",
+        isScrolled ? "shadow-lg shadow-black/50" : "border-b border-zinc-900"
       )}>
         <nav>
           {/* Main Header Section */}
@@ -82,16 +83,16 @@ export function Header() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="SEARCH YOUR ITEMS..."
-                        className="w-64 bg-transparent border-b border-stone-900 py-2 text-[11px] font-bold uppercase tracking-widest focus:outline-none"
+                        className="w-64 bg-transparent border-b border-zinc-700 py-2 text-[11px] font-bold uppercase tracking-widest focus:outline-none text-white"
                       />
                       <button type="button" onClick={() => setIsSearchOpen(false)} className="ml-4">
-                        <X className="w-5 h-5 text-stone-400" />
+                        <X className="w-5 h-5 text-zinc-500" />
                       </button>
                     </form>
                   ) : (
                     <button
                       onClick={() => setIsSearchOpen(true)}
-                      className="flex items-center text-stone-800 hover:text-emerald-800 transition-colors group"
+                      className="flex items-center text-zinc-400 hover:text-white transition-colors group"
                     >
                       <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
                       <span className="ml-3 text-[11px] font-bold uppercase tracking-[0.2em]">Search</span>
@@ -99,7 +100,7 @@ export function Header() {
                   )}
                 </div>
                 <button
-                  className="lg:hidden p-2 text-stone-900"
+                  className="lg:hidden p-2 text-white"
                   onClick={() => setIsMenuOpen(true)}
                 >
                   <Menu className="w-6 h-6" />
@@ -108,25 +109,31 @@ export function Header() {
 
               {/* Center: Logo */}
               <div className="flex-shrink-0">
-                <Link href="/" className="text-center group">
-                  <div className="text-3xl lg:text-4xl font-black tracking-[0.4em] text-stone-900">
-                    GURU NETWORK
+                <Link href="/" className="flex items-center justify-center">
+                  <div className="relative w-20 h-20 lg:w-28 lg:h-28">
+                    <Image
+                      src="/images/logo.jpeg"
+                      alt="KRAFT MINDS BY GURU"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
                   </div>
                 </Link>
               </div>
 
               {/* Right: Account & Cart */}
               <div className="flex-1 flex items-center justify-end space-x-4 lg:space-x-8">
-                <Link href="/login" className="hidden lg:flex items-center text-stone-600 hover:text-stone-900 transition-colors">
+                <Link href="/login" className="hidden lg:flex items-center text-zinc-400 hover:text-white transition-colors">
                   <span className="mr-2 text-xs font-bold uppercase tracking-widest">Log in</span>
                   <User className="w-5 h-5" />
                 </Link>
-                <Link href="/cart" className="flex items-center text-stone-600 hover:text-stone-900 transition-colors relative">
+                <Link href="/cart" className="flex items-center text-zinc-400 hover:text-white transition-colors relative">
                   <span className="hidden lg:block mr-2 text-xs font-bold uppercase tracking-widest">Cart</span>
                   <div className="relative">
-                    <ShoppingCart className="w-5 h-5 text-stone-900" />
+                    <ShoppingCart className="w-5 h-5 text-white" />
                     {totalItems > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-emerald-700 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                      <span className="absolute -top-2 -right-2 bg-zinc-100 text-black text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
                         {totalItems}
                       </span>
                     )}
@@ -141,19 +148,19 @@ export function Header() {
                 <div key={item.name} className="relative group">
                   {item.subItems ? (
                     <div className="flex items-center cursor-pointer py-2">
-                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-stone-600 group-hover:text-stone-900 transition-colors">
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 group-hover:text-white transition-colors">
                         {item.name}
                       </span>
-                      <ChevronDown className="ml-1 w-3 h-3 text-stone-400 group-hover:text-stone-900 transition-colors" />
+                      <ChevronDown className="ml-1 w-3 h-3 text-zinc-600 group-hover:text-white transition-colors" />
 
                       {/* Mega-ish Dropdown */}
                       <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div className="bg-white border border-stone-100 shadow-2xl py-4 min-w-[200px]">
+                        <div className="bg-black border border-zinc-800 shadow-2xl py-4 min-w-[200px]">
                           {item.subItems.map((subItem) => (
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="block px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-stone-600 hover:bg-stone-50 hover:text-emerald-700 transition-colors"
+                              className="block px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-zinc-400 hover:bg-zinc-900 hover:text-white transition-colors"
                             >
                               {subItem.name}
                             </Link>
@@ -164,7 +171,7 @@ export function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="py-2 text-xs font-bold uppercase tracking-[0.2em] text-stone-600 hover:text-stone-900 transition-colors"
+                      className="py-2 text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -186,15 +193,22 @@ export function Header() {
       >
         <div
           className={cn(
-            "fixed inset-y-0 left-0 w-full max-w-sm bg-white shadow-xl transition-transform duration-300 ease-in-out transform",
+            "fixed inset-y-0 left-0 w-full max-w-sm bg-black shadow-xl transition-transform duration-300 ease-in-out transform",
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           )}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col h-full">
-            <div className="flex justify-between items-center p-6 border-b border-stone-100">
-              <div className="text-xl font-black tracking-widest text-stone-900">GURU NETWORK</div>
-              <button onClick={() => setIsMenuOpen(false)} className="p-2 text-stone-900">
+            <div className="flex justify-between items-center p-6 border-b border-zinc-900">
+              <div className="relative w-16 h-16">
+                <Image
+                  src="/images/logo.jpeg"
+                  alt="KRAFT MINDS BY GURU"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <button onClick={() => setIsMenuOpen(false)} className="p-2 text-white">
                 <X className="w-6 h-6" />
               </button>
             </div>
@@ -206,7 +220,7 @@ export function Header() {
                     <>
                       <button
                         onClick={() => setOpenSubmenu(openSubmenu === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-sm font-bold uppercase tracking-[0.2em] text-stone-900"
+                        className="flex items-center justify-between w-full text-sm font-bold uppercase tracking-[0.2em] text-zinc-400"
                       >
                         {item.name}
                         <ChevronDown className={cn("w-5 h-5 transition-transform", openSubmenu === item.name && "rotate-180")} />
@@ -217,7 +231,7 @@ export function Header() {
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="block text-stone-500 text-xs font-bold uppercase tracking-widest"
+                              className="block text-zinc-500 text-xs font-bold uppercase tracking-widest"
                               onClick={() => setIsMenuOpen(false)}
                             >
                               {subItem.name}
@@ -229,7 +243,7 @@ export function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-sm font-bold uppercase tracking-[0.2em] text-stone-900"
+                      className="block text-sm font-bold uppercase tracking-[0.2em] text-zinc-400"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -239,21 +253,21 @@ export function Header() {
               ))}
             </div>
 
-            <div className="p-8 border-t border-stone-100 bg-stone-50 space-y-4">
-              <Link href="/login" className="flex items-center text-stone-900 font-bold uppercase tracking-widest text-xs" onClick={() => setIsMenuOpen(false)}>
+            <div className="p-8 border-t border-zinc-900 bg-zinc-950 space-y-4">
+              <Link href="/login" className="flex items-center text-zinc-400 font-bold uppercase tracking-widest text-xs" onClick={() => setIsMenuOpen(false)}>
                 <User className="w-5 h-5 mr-3" />
                 Account
               </Link>
               <form onSubmit={handleSearch} className="relative">
                  <button type="submit">
-                   <Search className="absolute left-0 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
+                   <Search className="absolute left-0 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" />
                  </button>
                  <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="SEARCH YOUR ITEMS..."
-                  className="w-full bg-transparent border-b border-stone-200 py-2 pl-8 text-xs font-bold uppercase tracking-widest focus:outline-none focus:border-stone-900"
+                  className="w-full bg-transparent border-b border-zinc-800 py-2 pl-8 text-xs font-bold uppercase tracking-widest focus:outline-none focus:border-zinc-500 text-white"
                 />
               </form>
             </div>

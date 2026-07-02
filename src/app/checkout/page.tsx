@@ -49,7 +49,7 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 bg-stone-50">
         <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-xl text-center border border-stone-100">
-          <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-20 h-20 bg-zinc-100 text-zinc-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-10 h-10" />
           </div>
           <h1 className="text-3xl font-bold text-stone-900 mb-4">Order Confirmed!</h1>
@@ -73,7 +73,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-stone-500">Account Name:</span>
-                    <span className="font-bold">Guru Network Ltd</span>
+                    <span className="font-bold">Kraft Minds by Guru Ltd</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-stone-500">Account Number:</span>
@@ -85,12 +85,12 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between mt-4 pt-4 border-t border-stone-200">
                     <span className="text-stone-900 font-bold">Total Amount:</span>
-                    <span className="text-xl font-black text-emerald-700">£{total.toFixed(2)}</span>
+                    <span className="text-xl font-black text-zinc-700">£{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
               <p className="text-sm text-stone-500 mb-8 flex items-start gap-2 text-left">
-                <Info className="w-4 h-4 mt-0.5 flex-shrink-0 text-emerald-700" />
+                <Info className="w-4 h-4 mt-0.5 flex-shrink-0 text-zinc-700" />
                 <span>Please use your email address as the payment reference. Your order will be shipped once the payment is confirmed.</span>
               </p>
             </>
@@ -98,7 +98,7 @@ export default function CheckoutPage() {
 
           <Link
             href="/"
-            className="block w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-emerald-700 transition-colors"
+            className="block w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-colors"
           >
             Back to Home
           </Link>
@@ -111,7 +111,7 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
-        <Link href="/shop" className="text-emerald-700 font-bold">Return to Shop</Link>
+        <Link href="/shop" className="text-zinc-700 font-bold">Return to Shop</Link>
       </div>
     );
   }
@@ -134,7 +134,7 @@ export default function CheckoutPage() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -147,7 +147,7 @@ export default function CheckoutPage() {
                       type="text"
                       value={formData.firstName}
                       onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     />
                   </div>
                   <div>
@@ -157,7 +157,7 @@ export default function CheckoutPage() {
                       type="text"
                       value={formData.lastName}
                       onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     />
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export default function CheckoutPage() {
                     type="text"
                     value={formData.address}
                     onChange={(e) => setFormData({...formData, address: e.target.value})}
-                    className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                   />
                 </div>
 
@@ -181,7 +181,7 @@ export default function CheckoutPage() {
                       type="text"
                       value={formData.city}
                       onChange={(e) => setFormData({...formData, city: e.target.value})}
-                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     />
                   </div>
                   <div>
@@ -191,7 +191,7 @@ export default function CheckoutPage() {
                       type="text"
                       value={formData.postcode}
                       onChange={(e) => setFormData({...formData, postcode: e.target.value})}
-                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     />
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function CheckoutPage() {
                       onClick={() => setPaymentMethod('card')}
                       className={cn(
                         "p-4 border rounded-lg flex flex-col items-center gap-2 transition-all",
-                        paymentMethod === 'card' ? "border-emerald-600 bg-emerald-50 text-emerald-900 ring-2 ring-emerald-500" : "border-stone-200 text-stone-500"
+                        paymentMethod === 'card' ? "border-zinc-600 bg-zinc-50 text-zinc-900 ring-2 ring-zinc-500" : "border-stone-200 text-stone-500"
                       )}
                     >
                       <ShieldCheck className="w-6 h-6" />
@@ -219,7 +219,7 @@ export default function CheckoutPage() {
                       onClick={() => setPaymentMethod('bank')}
                       className={cn(
                         "p-4 border rounded-lg flex flex-col items-center gap-2 transition-all",
-                        paymentMethod === 'bank' ? "border-emerald-600 bg-emerald-50 text-emerald-900 ring-2 ring-emerald-500" : "border-stone-200 text-stone-500"
+                        paymentMethod === 'bank' ? "border-zinc-600 bg-zinc-50 text-zinc-900 ring-2 ring-zinc-500" : "border-stone-200 text-stone-500"
                       )}
                     >
                       <Info className="w-6 h-6" />
@@ -245,7 +245,7 @@ export default function CheckoutPage() {
                           value={formData.cardNumber}
                           onChange={(e) => setFormData({...formData, cardNumber: e.target.value})}
                           placeholder="0000 0000 0000 0000"
-                          className="w-full px-4 py-3 rounded border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                          className="w-full px-4 py-3 rounded border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                         />
                       </div>
                       <div className="grid grid-cols-2 gap-4">
@@ -257,7 +257,7 @@ export default function CheckoutPage() {
                             value={formData.expiry}
                             onChange={(e) => setFormData({...formData, expiry: e.target.value})}
                             placeholder="MM / YY"
-                            className="w-full px-4 py-3 rounded border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                            className="w-full px-4 py-3 rounded border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                           />
                         </div>
                         <div>
@@ -268,14 +268,14 @@ export default function CheckoutPage() {
                             value={formData.cvc}
                             onChange={(e) => setFormData({...formData, cvc: e.target.value})}
                             placeholder="123"
-                            className="w-full px-4 py-3 rounded border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                            className="w-full px-4 py-3 rounded border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                           />
                         </div>
                       </div>
                     </div>
                   ) : (
-                    <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-100">
-                      <p className="text-sm text-emerald-800">
+                    <div className="bg-zinc-50 p-6 rounded-lg border border-zinc-100">
+                      <p className="text-sm text-zinc-800">
                         You will be provided with our bank details on the next page to complete your manual transfer.
                       </p>
                     </div>
@@ -290,7 +290,7 @@ export default function CheckoutPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-emerald-700 transition-all shadow-lg shadow-stone-900/10"
+                    className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-all shadow-lg shadow-stone-900/10"
                   >
                     {paymentMethod === 'card' ? `Pay £${total.toFixed(2)}` : 'Place Order'}
                   </button>
@@ -321,7 +321,7 @@ export default function CheckoutPage() {
                               <span key={i} className="text-[9px] text-stone-400 uppercase font-bold">{v}</span>
                             ))}
                             {item.subscriptionFrequency && (
-                              <span className="text-[9px] text-emerald-600 uppercase font-bold">Every {item.subscriptionFrequency}</span>
+                              <span className="text-[9px] text-zinc-600 uppercase font-bold">Every {item.subscriptionFrequency}</span>
                             )}
                           </div>
                         )}
@@ -340,7 +340,7 @@ export default function CheckoutPage() {
                       type="text"
                       id="promo"
                       placeholder="Enter code"
-                      className="flex-1 px-3 py-2 text-sm rounded border border-stone-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                      className="flex-1 px-3 py-2 text-sm rounded border border-stone-200 focus:outline-none focus:ring-1 focus:ring-zinc-500"
                     />
                     <button type="button" className="px-4 py-2 bg-stone-100 text-stone-600 rounded text-xs font-bold uppercase hover:bg-stone-200 transition-colors">
                       Apply

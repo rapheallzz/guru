@@ -18,7 +18,7 @@ export default function DeliveryPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-12">
             <div className="flex items-start space-x-6">
-              <div className="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-zinc-100 text-zinc-700 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Truck className="w-6 h-6" />
               </div>
               <div>
@@ -58,7 +58,7 @@ export default function DeliveryPage() {
             </div>
 
             <div className="flex items-start space-x-6">
-              <div className="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-zinc-100 text-zinc-700 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Shield className="w-6 h-6" />
               </div>
               <div>

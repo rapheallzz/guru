@@ -99,7 +99,7 @@ export default function ProductPage() {
                   onClick={() => setSelectedImage(idx)}
                   className={cn(
                     "flex-shrink-0 w-20 h-20 rounded-md overflow-hidden border-2 transition-all relative",
-                    selectedImage === idx ? "border-emerald-700 opacity-100" : "border-transparent opacity-60 hover:opacity-100"
+                    selectedImage === idx ? "border-zinc-700 opacity-100" : "border-transparent opacity-60 hover:opacity-100"
                   )}
                 >
                   <Image src={img} alt={`${product.name} ${idx + 1}`} fill className="object-cover" />
@@ -112,7 +112,7 @@ export default function ProductPage() {
           <div className="mt-10 lg:mt-0">
             <div className="flex justify-between items-start">
               <div>
-                <p className="text-sm font-bold text-emerald-700 uppercase tracking-widest mb-2">{product.category}</p>
+                <p className="text-sm font-bold text-zinc-700 uppercase tracking-widest mb-2">{product.category}</p>
                 <h1 className="text-3xl font-bold text-stone-900 mb-4">{product.name}</h1>
               </div>
               <button
@@ -136,7 +136,7 @@ export default function ProductPage() {
               <span className="mx-4 text-stone-200">|</span>
               <span className={cn(
                 "text-xs font-bold uppercase tracking-widest",
-                product.inventory > 0 ? "text-emerald-600" : "text-amber-600"
+                product.inventory > 0 ? "text-zinc-600" : "text-amber-600"
               )}>
                 {product.inventory > 0 ? `In Stock (${product.inventory})` : 'Made to Order'}
               </span>
@@ -149,7 +149,7 @@ export default function ProductPage() {
                     onClick={() => setPurchaseType('one-time')}
                     className={cn(
                       "w-full p-4 text-left border rounded-lg transition-all flex justify-between items-center",
-                      purchaseType === 'one-time' ? "border-emerald-700 bg-emerald-50" : "border-stone-200"
+                      purchaseType === 'one-time' ? "border-zinc-700 bg-zinc-50" : "border-stone-200"
                     )}
                   >
                     <div>
@@ -162,7 +162,7 @@ export default function ProductPage() {
                     onClick={() => setPurchaseType('subscription')}
                     className={cn(
                       "w-full p-4 text-left border rounded-lg transition-all",
-                      purchaseType === 'subscription' ? "border-emerald-700 bg-emerald-50" : "border-stone-200"
+                      purchaseType === 'subscription' ? "border-zinc-700 bg-zinc-50" : "border-stone-200"
                     )}
                   >
                     <div className="flex justify-between items-center mb-4">
@@ -174,8 +174,8 @@ export default function ProductPage() {
                     </div>
 
                     {purchaseType === 'subscription' && (
-                      <div className="pt-4 border-t border-emerald-200">
-                        <p className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-2">Delivery every:</p>
+                      <div className="pt-4 border-t border-zinc-200">
+                        <p className="text-xs font-bold text-zinc-800 uppercase tracking-wider mb-2">Delivery every:</p>
                         <div className="flex gap-2">
                           {['4 weeks', '6 weeks', '8 weeks'].map((freq) => (
                             <button
@@ -187,8 +187,8 @@ export default function ProductPage() {
                               className={cn(
                                 "px-3 py-1 text-xs font-bold rounded-full border transition-all",
                                 subscriptionFrequency === freq
-                                  ? "bg-emerald-700 border-emerald-700 text-white"
-                                  : "bg-white border-emerald-200 text-emerald-700 hover:bg-emerald-100"
+                                  ? "bg-zinc-700 border-zinc-700 text-white"
+                                  : "bg-white border-zinc-200 text-zinc-700 hover:bg-zinc-100"
                               )}
                             >
                               {freq}
@@ -242,21 +242,21 @@ export default function ProductPage() {
               <div className="flex items-center border border-stone-200 rounded-md">
                 <button
                   onClick={() => setQuantity(q => Math.max(1, q - 1))}
-                  className="p-3 hover:text-emerald-700 transition-colors"
+                  className="p-3 hover:text-zinc-700 transition-colors"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
                 <span className="w-12 text-center font-bold">{quantity}</span>
                 <button
                   onClick={() => setQuantity(q => q + 1)}
-                  className="p-3 hover:text-emerald-700 transition-colors"
+                  className="p-3 hover:text-zinc-700 transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                 </button>
               </div>
               <button
                 onClick={handleAddToCart}
-                className="flex-grow bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-emerald-700 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-stone-900/10"
+                className="flex-grow bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-stone-900/10"
               >
                 <ShoppingCart className="w-5 h-5" />
                 <span>{product.inventory === 0 ? 'Order (Made to Order)' : 'Add to Cart'}</span>
@@ -266,15 +266,15 @@ export default function ProductPage() {
             {/* Features/Trust */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-8 border-t border-stone-100">
               <div className="flex items-center space-x-3">
-                <Truck className="w-5 h-5 text-emerald-700" />
+                <Truck className="w-5 h-5 text-zinc-700" />
                 <span className="text-xs font-medium text-stone-600">Fast UK Delivery</span>
               </div>
               <div className="flex items-center space-x-3">
-                <RefreshCw className="w-5 h-5 text-emerald-700" />
+                <RefreshCw className="w-5 h-5 text-zinc-700" />
                 <span className="text-xs font-medium text-stone-600">30-Day Returns</span>
               </div>
               <div className="flex items-center space-x-3">
-                <ShieldCheck className="w-5 h-5 text-emerald-700" />
+                <ShieldCheck className="w-5 h-5 text-zinc-700" />
                 <span className="text-xs font-medium text-stone-600">Secure Payment</span>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function ProductPage() {
                   )}
                 >
                   {tab}
-                  {activeTab === tab && <div className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-700" />}
+                  {activeTab === tab && <div className="absolute bottom-0 left-0 w-full h-0.5 bg-zinc-700" />}
                 </button>
               ))}
             </div>
@@ -358,13 +358,13 @@ export default function ProductPage() {
                     </div>
                     <textarea
                       placeholder="Your Review *"
-                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 h-32"
+                      className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500 h-32"
                     />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <input type="text" placeholder="Name *" className="px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
-                      <input type="email" placeholder="Email *" className="px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                      <input type="text" placeholder="Name *" className="px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500" />
+                      <input type="email" placeholder="Email *" className="px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500" />
                     </div>
-                    <button className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-emerald-700 transition-colors">
+                    <button className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-zinc-700 transition-colors">
                       Submit Review
                     </button>
                   </form>
@@ -396,7 +396,7 @@ export default function ProductPage() {
           </div>
           <button
             onClick={handleAddToCart}
-            className="bg-stone-900 text-white font-bold px-6 py-3 rounded-md hover:bg-emerald-700 transition-all flex items-center gap-2"
+            className="bg-stone-900 text-white font-bold px-6 py-3 rounded-md hover:bg-zinc-700 transition-all flex items-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             <span>Add</span>

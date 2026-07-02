@@ -19,7 +19,7 @@ export function Hero() {
           Handcrafted with passion. Naturally inspired.
         </h2>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-10 leading-[1.05]">
-          EXPERIENCE THE UNIQUE ARTISTRY OF GURU NETWORK
+          EXPERIENCE THE UNIQUE ARTISTRY OF KRAFT MINDS BY GURU
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl font-medium max-w-3xl mx-auto mb-14 text-stone-100 leading-relaxed opacity-90">
           Our all natural, handcrafted creations are made from the finest sustainable materials.
@@ -28,7 +28,7 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Link
             href="/shop"
-            className="px-12 py-5 bg-white text-stone-900 font-bold uppercase tracking-[0.25em] text-[11px] rounded-full hover:bg-emerald-50 transition-all shadow-2xl"
+            className="px-12 py-5 bg-white text-stone-900 font-bold uppercase tracking-[0.25em] text-[11px] rounded-full hover:bg-zinc-50 transition-all shadow-2xl"
           >
             Shop All
           </Link>

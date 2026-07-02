@@ -25,7 +25,7 @@ export default function CustomRequestsPage() {
   if (submitted) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center px-4">
-        <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6">
+        <div className="w-20 h-20 bg-zinc-100 text-zinc-600 rounded-full flex items-center justify-center mb-6">
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <h1 className="text-3xl font-bold text-stone-900 mb-4">Request Sent!</h1>
@@ -41,7 +41,7 @@ export default function CustomRequestsPage() {
             setSubmitted(false);
             setFormData({ name: '', email: '', description: '', budget: '' });
           }}
-          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-emerald-700 transition-colors"
+          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-zinc-700 transition-colors"
         >
           Send Another Request
         </button>
@@ -71,7 +71,7 @@ export default function CustomRequestsPage() {
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                   placeholder="Your Name"
                 />
               </div>
@@ -82,7 +82,7 @@ export default function CustomRequestsPage() {
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                   placeholder="you@example.com"
                 />
               </div>
@@ -95,7 +95,7 @@ export default function CustomRequestsPage() {
                 rows={6}
                 value={formData.description}
                 onChange={(e) => setFormData({...formData, description: e.target.value})}
-                className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                 placeholder="Tell us about the project, materials, colors, and any specific requirements..."
               />
             </div>
@@ -107,7 +107,7 @@ export default function CustomRequestsPage() {
                   type="text"
                   value={formData.budget}
                   onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                  className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                   placeholder="e.g. £50 - £100"
                 />
               </div>
@@ -122,7 +122,7 @@ export default function CustomRequestsPage() {
             </div>
 
             <div className="bg-stone-50 p-4 rounded-lg flex items-start gap-3">
-              <Info className="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5" />
+              <Info className="w-5 h-5 text-zinc-700 flex-shrink-0 mt-0.5" />
               <p className="text-xs text-stone-600">
                 Custom requests are subject to artisan availability. We will provide a quote and estimated timeline after reviewing your description.
               </p>
@@ -130,7 +130,7 @@ export default function CustomRequestsPage() {
 
             <button
               type="submit"
-              className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-emerald-700 transition-all flex items-center justify-center space-x-2"
+              className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-all flex items-center justify-center space-x-2"
             >
               <Send className="w-5 h-5" />
               <span>Submit Custom Request</span>

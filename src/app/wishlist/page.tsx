@@ -19,7 +19,7 @@ export default function WishlistPage() {
         <p className="text-stone-600 mb-8">Save items you love here for later. No account needed!</p>
         <Link
           href="/shop"
-          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-emerald-700 transition-colors"
+          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-zinc-700 transition-colors"
         >
           Explore Crafts
         </Link>

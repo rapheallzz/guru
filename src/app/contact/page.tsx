@@ -14,7 +14,7 @@ export default function ContactPage() {
   if (submitted) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center px-4">
-        <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6">
+        <div className="w-20 h-20 bg-zinc-100 text-zinc-600 rounded-full flex items-center justify-center mb-6">
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <h1 className="text-3xl font-bold text-stone-900 mb-4">Message Sent!</h1>
@@ -23,7 +23,7 @@ export default function ContactPage() {
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-emerald-700 transition-colors"
+          className="px-8 py-3 bg-stone-900 text-white font-bold rounded-md hover:bg-zinc-700 transition-colors"
         >
           Send Another Message
         </button>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 <input
                   required
                   type="text"
-                  className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                 />
               </div>
               <div>
@@ -96,12 +96,12 @@ export default function ContactPage() {
                 <input
                   required
                   type="email"
-                  className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-bold text-stone-700 mb-2">Subject</label>
-                <select className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <select className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500">
                   <option>General Inquiry</option>
                   <option>Order Status</option>
                   <option>Returns & Exchanges</option>
@@ -113,12 +113,12 @@ export default function ContactPage() {
                 <textarea
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-4 py-3 bg-white rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-emerald-700 transition-all flex items-center justify-center space-x-2"
+                className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-all flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>

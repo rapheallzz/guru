@@ -3,7 +3,7 @@ export default function TermsPage() {
     <div className="max-w-3xl mx-auto px-4 py-20">
       <h1 className="text-4xl font-bold mb-8 uppercase tracking-tight">Terms of Service</h1>
       <div className="prose prose-stone max-w-none text-stone-600">
-        <p className="mb-4">By using Guru Network, you agree to the following terms. Please read them carefully.</p>
+        <p className="mb-4">By using Kraft Minds by Guru, you agree to the following terms. Please read them carefully.</p>
         <h2 className="text-2xl font-bold text-stone-900 mt-8 mb-4">Orders and Payment</h2>
         <p className="mb-4">All orders are subject to availability. For "Made to Order" items, please allow extra time for production as specified on the product page. Payment is required in full before shipping.</p>
         <h2 className="text-2xl font-bold text-stone-900 mt-8 mb-4">Shipping and Returns</h2>

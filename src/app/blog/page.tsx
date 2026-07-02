@@ -28,7 +28,7 @@ export default function BlogPage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-emerald-800 text-xs font-bold uppercase tracking-widest rounded-full">
+                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-zinc-800 text-xs font-bold uppercase tracking-widest rounded-full">
                     {post.category}
                   </span>
                 </div>
@@ -40,7 +40,7 @@ export default function BlogPage() {
                   <span className="flex items-center"><User className="w-3 h-3 mr-1" /> {post.author}</span>
                 </div>
 
-                <h2 className="text-xl font-bold text-stone-900 mb-4 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                <h2 className="text-xl font-bold text-stone-900 mb-4 group-hover:text-zinc-700 transition-colors line-clamp-2">
                   {post.title}
                 </h2>
 
@@ -50,7 +50,7 @@ export default function BlogPage() {
 
                 <Link
                   href={`/blog/${post.id}`}
-                  className="flex items-center space-x-2 text-stone-900 font-bold hover:text-emerald-700 transition-colors uppercase tracking-widest text-xs"
+                  className="flex items-center space-x-2 text-stone-900 font-bold hover:text-zinc-700 transition-colors uppercase tracking-widest text-xs"
                 >
                   <span>Read Article</span>
                   <ArrowRight className="w-4 h-4" />

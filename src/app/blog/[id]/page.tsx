@@ -18,7 +18,7 @@ export default function BlogPostPage() {
   return (
     <article className="bg-white min-h-screen pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Link href="/blog" className="inline-flex items-center text-emerald-700 font-bold mb-8 hover:underline">
+        <Link href="/blog" className="inline-flex items-center text-zinc-700 font-bold mb-8 hover:underline">
           <ChevronLeft className="w-4 h-4 mr-1" />
           Back to Blog
         </Link>
@@ -50,7 +50,7 @@ export default function BlogPostPage() {
               <div className="w-16 h-16 bg-stone-200 rounded-full flex-shrink-0" />
               <div>
                 <p className="font-bold text-stone-900">{post.author}</p>
-                <p className="text-sm text-stone-500 italic">Lead artisan and curator at Guru Network. Passionate about sustainable materials and traditional techniques.</p>
+                <p className="text-sm text-stone-500 italic">Lead artisan and curator at Kraft Minds by Guru. Passionate about sustainable materials and traditional techniques.</p>
               </div>
             </div>
           </div>

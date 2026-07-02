@@ -53,7 +53,7 @@ export default function SubscriptionsPage() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full pl-10 pr-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -61,7 +61,7 @@ export default function SubscriptionsPage() {
               <button
                 type="submit"
                 disabled={isSearching}
-                className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-emerald-700 transition-all flex items-center justify-center space-x-2"
+                className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-all flex items-center justify-center space-x-2"
               >
                 {isSearching ? (
                   <RefreshCw className="w-5 h-5 animate-spin" />
@@ -83,7 +83,7 @@ export default function SubscriptionsPage() {
               </div>
               <button
                 onClick={() => setHasSearched(false)}
-                className="text-sm font-bold text-emerald-700 hover:underline"
+                className="text-sm font-bold text-zinc-700 hover:underline"
               >
                 Change Email
               </button>
@@ -95,7 +95,7 @@ export default function SubscriptionsPage() {
                   <div key={order.id} className="bg-white border border-stone-200 rounded-xl overflow-hidden shadow-sm">
                     <div className="bg-stone-50 px-6 py-4 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="bg-emerald-100 text-emerald-700 p-2 rounded-lg">
+                        <div className="bg-zinc-100 text-zinc-700 p-2 rounded-lg">
                           <RefreshCw className="w-5 h-5" />
                         </div>
                         <div>
@@ -110,7 +110,7 @@ export default function SubscriptionsPage() {
                         </div>
                         <div>
                           <p className="text-xs font-bold text-stone-400 uppercase tracking-widest">Status</p>
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-zinc-100 text-zinc-800">
                             Active
                           </span>
                         </div>
@@ -128,7 +128,7 @@ export default function SubscriptionsPage() {
                               <h3 className="font-bold text-stone-900">{item.name}</h3>
                               <p className="text-sm text-stone-500 mb-2">Quantity: {item.quantity}</p>
                               <div className="flex flex-wrap gap-2">
-                                <span className="px-2 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-black uppercase rounded border border-emerald-100">
+                                <span className="px-2 py-1 bg-zinc-50 text-zinc-700 text-[10px] font-black uppercase rounded border border-zinc-100">
                                   Every {item.subscriptionFrequency}
                                 </span>
                                 {item.selectedVariants && Object.entries(item.selectedVariants).map(([k, v]: [string, any]) => (
@@ -166,7 +166,7 @@ export default function SubscriptionsPage() {
                 <Package className="w-12 h-12 text-stone-300 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-stone-900 mb-2">No active subscriptions found</h3>
                 <p className="text-stone-500 mb-8 max-w-sm mx-auto">We couldn't find any recurring orders associated with this email address.</p>
-                <Link href="/shop" className="inline-flex items-center gap-2 bg-emerald-700 text-white font-bold px-6 py-3 rounded-md hover:bg-emerald-800 transition-colors">
+                <Link href="/shop" className="inline-flex items-center gap-2 bg-zinc-700 text-white font-bold px-6 py-3 rounded-md hover:bg-zinc-800 transition-colors">
                   <span>Explore Products</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -181,21 +181,21 @@ export default function SubscriptionsPage() {
           <h2 className="text-3xl font-bold mb-6">Subscription Benefits</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             <div>
-              <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-zinc-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="font-bold text-xl">10%</span>
               </div>
               <h4 className="font-bold mb-2">Always Discounted</h4>
               <p className="text-stone-400 text-sm">Enjoy 10% off every recurring delivery, automatically applied.</p>
             </div>
             <div>
-              <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-zinc-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <RefreshCw className="w-6 h-6" />
               </div>
               <h4 className="font-bold mb-2">Fully Flexible</h4>
               <p className="text-stone-400 text-sm">Skip, pause, or cancel anytime. No commitments, no hidden fees.</p>
             </div>
             <div>
-              <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-zinc-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-6 h-6" />
               </div>
               <h4 className="font-bold mb-2">Set & Forget</h4>
