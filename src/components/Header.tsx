@@ -46,11 +46,6 @@ export function Header() {
 
   return (
     <>
-      {/* Announcement Bar */}
-      <div className="bg-black text-zinc-400 py-3 text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-center px-4 border-b border-zinc-800">
-        Free delivery over £50
-      </div>
-
       <header className={cn(
         "bg-black transition-all duration-300 sticky top-0 z-50",
         isScrolled ? "shadow-lg shadow-black/50" : "border-b border-zinc-900"
