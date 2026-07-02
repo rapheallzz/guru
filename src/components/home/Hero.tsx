@@ -25,7 +25,7 @@ export function Hero() {
           Our all natural, handcrafted creations are made from the finest sustainable materials.
           Bringing soul and light to your home.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-6">
           <Link
             href="/shop"
             className="px-12 py-5 bg-white text-stone-900 font-bold uppercase tracking-[0.25em] text-[11px] rounded-full hover:bg-zinc-50 transition-all shadow-2xl"
