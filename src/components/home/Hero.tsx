@@ -18,7 +18,7 @@ export function Hero() {
         <h2 className="text-xs lg:text-sm font-bold tracking-[0.5em] uppercase mb-8 opacity-90">
           Handcrafted with passion. Naturally inspired.
         </h2>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-10 leading-[1.05]">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-10 leading-[1.05]">
           EXPERIENCE THE UNIQUE ARTISTRY OF KRAFT MINDS BY GURU
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl font-medium max-w-3xl mx-auto mb-14 text-stone-100 leading-relaxed opacity-90">
