@@ -102,6 +102,19 @@ export default function CustomRequestsPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
+                <label className="block text-sm font-bold text-stone-700 mb-2">Estimated Budget (₦)</label>
+                <div className="relative">
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-500 font-bold text-zinc-800">₦</span>
+                  <input
+                    type="text"
+                    value={formData.budget}
+                    onChange={(e) => setFormData({...formData, budget: e.target.value})}
+                    className="w-full pl-10 pr-4 py-3 rounded-md border border-stone-200 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                    placeholder="e.g. 50,000"
+                  />
+                </div>
+              </div>
+              <div>
                 <label className="block text-sm font-bold text-stone-700 mb-2">Upload Reference Image</label>
                 <div className="relative border-2 border-dashed border-stone-200 rounded-md p-3 flex items-center justify-center hover:bg-stone-50 transition-colors cursor-pointer">
                   <input type="file" className="absolute inset-0 opacity-0 cursor-pointer" />
