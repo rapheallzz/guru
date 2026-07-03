@@ -33,11 +33,6 @@ export function ProductCard({ product }: { product: Product }) {
             className="object-cover"
           />
         </motion.div>
-        {product.inventory === 0 && (
-          <div className="absolute top-2 left-2 z-10 bg-stone-900/80 text-white text-[10px] uppercase font-bold px-2 py-1 rounded">
-            Made to Order
-          </div>
-        )}
       </Link>
 
       <div className="p-4">
@@ -61,9 +56,6 @@ export function ProductCard({ product }: { product: Product }) {
           </h3>
         </Link>
 
-        <p className="text-stone-900 font-bold mb-2">
-          ₦{product.price.toFixed(2)}
-        </p>
 
         <p className="text-stone-600 text-sm line-clamp-2 h-10">
           {product.description}

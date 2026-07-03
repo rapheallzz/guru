@@ -94,10 +94,6 @@ export default function CartPage() {
                       </div>
                     </div>
 
-                    <div className="text-right">
-                      <p className="text-lg font-bold text-stone-900">₦{(item.price * item.quantity).toFixed(2)}</p>
-                      <p className="text-xs text-stone-400">₦{item.price.toFixed(2)} each</p>
-                    </div>
                   </li>
                 ))}
               </ul>
@@ -109,20 +105,6 @@ export default function CartPage() {
             <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100 sticky top-32">
               <h2 className="text-lg font-bold text-stone-900 mb-6 uppercase tracking-wider">Order Summary</h2>
 
-              <div className="space-y-4 mb-6">
-                <div className="flex justify-between text-stone-600">
-                  <span>Subtotal</span>
-                  <span>₦{totalPrice.toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between text-stone-600">
-                  <span>Shipping</span>
-                  <span>{totalPrice >= 50 ? 'FREE' : '₦4.95'}</span>
-                </div>
-                <div className="border-t border-stone-100 pt-4 flex justify-between text-xl font-bold text-stone-900">
-                  <span>Total</span>
-                  <span>₦{(totalPrice + (totalPrice >= 50 ? 0 : 4.95)).toFixed(2)}</span>
-                </div>
-              </div>
 
               <Link
                 href="/checkout"

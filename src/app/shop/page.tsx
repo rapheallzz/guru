@@ -22,7 +22,6 @@ function ShopContent() {
 
   const [selectedCategory, setSelectedCategory] = useState(initialCategory || 'All');
   const [sortBy, setSortBy] = useState('Featured');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [showFilters, setShowFilters] = useState(false);
 
   const categories = ['All', 'Craft Works', 'LED Lights', 'Merch'];
@@ -32,16 +31,13 @@ function ShopContent() {
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                              product.description.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
-      const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
 
-      return matchesSearch && matchesCategory && matchesPrice;
+      return matchesSearch && matchesCategory;
     }).sort((a, b) => {
-      if (sortBy === 'Price: Low to High') return a.price - b.price;
-      if (sortBy === 'Price: High to Low') return b.price - a.price;
       if (sortBy === 'Popularity') return b.rating - a.rating;
       return 0; // Featured or default
     });
-  }, [searchQuery, selectedCategory, sortBy, priceRange]);
+  }, [searchQuery, selectedCategory, sortBy]);
 
   return (
     <div className="bg-white min-h-screen">
@@ -77,24 +73,6 @@ function ShopContent() {
               </div>
             </div>
 
-            <div>
-              <h3 className="text-sm font-bold text-stone-900 uppercase tracking-wider mb-4">Price Range</h3>
-              <div className="space-y-4">
-                <input
-                  type="range"
-                  min="0"
-                  max="200"
-                  step="10"
-                  value={priceRange[1]}
-                  onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
-                  className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-zinc-700"
-                />
-                <div className="flex justify-between text-xs text-stone-500 font-medium">
-                  <span>₦0</span>
-                  <span>Up to ₦{priceRange[1]}</span>
-                </div>
-              </div>
-            </div>
           </aside>
 
           {/* Main Content */}
@@ -129,8 +107,6 @@ function ShopContent() {
                   >
                     <option>Featured</option>
                     <option>Popularity</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none" />
                 </div>
@@ -174,7 +150,6 @@ function ShopContent() {
                   onClick={() => {
                     setSearchQuery('');
                     setSelectedCategory('All');
-                    setPriceRange([0, 200]);
                   }}
                   className="mt-4 text-zinc-700 font-bold hover:underline"
                 >

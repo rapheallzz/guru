@@ -56,14 +56,14 @@ export default function CheckoutPage() {
 
           {paymentMethod === 'card' ? (
             <div className="mb-8">
-              <p className="text-stone-600 mb-4">Your payment was successful and your order is being processed.</p>
+              <p className="text-stone-600 mb-4">Your order is being processed.</p>
               <div className="bg-stone-50 p-4 rounded-lg text-sm text-stone-500">
                 A confirmation email has been sent to <span className="font-bold">{formData.email}</span>.
               </div>
             </div>
           ) : (
             <>
-              <p className="text-stone-600 mb-8">Thank you for your order. To complete your purchase, please transfer the total amount to the following account:</p>
+              <p className="text-stone-600 mb-8">Thank you for your order. To complete your purchase, please transfer the funds to the following account:</p>
               <div className="bg-stone-50 p-6 rounded-lg text-left mb-8 border border-stone-200">
                 <p className="text-sm font-bold text-stone-400 uppercase tracking-widest mb-4 text-center">Payment Details</p>
                 <div className="space-y-2">
@@ -82,10 +82,6 @@ export default function CheckoutPage() {
                   <div className="flex justify-between">
                     <span className="text-stone-500">Sort Code:</span>
                     <span className="font-bold">00-11-22</span>
-                  </div>
-                  <div className="flex justify-between mt-4 pt-4 border-t border-stone-200">
-                    <span className="text-stone-900 font-bold">Total Amount:</span>
-                    <span className="text-xl font-black text-zinc-700">₦{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -292,7 +288,7 @@ export default function CheckoutPage() {
                     type="submit"
                     className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-all shadow-lg shadow-stone-900/10"
                   >
-                    {paymentMethod === 'card' ? `Pay ₦${total.toFixed(2)}` : 'Place Order'}
+                    {paymentMethod === 'card' ? 'Pay Now' : 'Place Order'}
                   </button>
                 </div>
               </form>
@@ -327,7 +323,6 @@ export default function CheckoutPage() {
                         )}
                       </div>
                     </div>
-                    <span className="text-sm font-bold text-stone-900">₦{(item.price * item.quantity).toFixed(2)}</span>
                   </li>
                 ))}
               </ul>
@@ -348,18 +343,6 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                <div className="flex justify-between text-sm text-stone-500">
-                  <span>Subtotal</span>
-                  <span>₦{totalPrice.toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between text-sm text-stone-500">
-                  <span>Shipping</span>
-                  <span>{shipping === 0 ? 'FREE' : `₦${shipping.toFixed(2)}`}</span>
-                </div>
-                <div className="flex justify-between text-xl font-bold text-stone-900 pt-3">
-                  <span>Total</span>
-                  <span>₦{total.toFixed(2)}</span>
-                </div>
               </div>
             </div>
           </div>

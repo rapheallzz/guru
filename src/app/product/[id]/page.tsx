@@ -102,7 +102,6 @@ export default function ProductPage() {
           {/* Product Info */}
           <div className="mt-10 lg:mt-0">
             <h1 className="text-4xl font-bold text-stone-900 mb-2">{product.name}</h1>
-            <p className="text-3xl font-black text-zinc-700 mb-6">₦{product.price.toFixed(2)}</p>
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-stone-600 leading-relaxed mb-8">{product.description}</p>
             </div>

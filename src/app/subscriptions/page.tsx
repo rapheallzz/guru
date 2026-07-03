@@ -138,10 +138,6 @@ export default function SubscriptionsPage() {
                                 ))}
                               </div>
                             </div>
-                            <div className="text-right">
-                              <p className="font-bold text-stone-900">₦{item.price.toFixed(2)}</p>
-                              <p className="text-[10px] text-stone-400 italic">Per delivery</p>
-                            </div>
                           </div>
                         ))}
                       </div>
@@ -182,10 +178,10 @@ export default function SubscriptionsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             <div>
               <div className="w-12 h-12 bg-zinc-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="font-bold text-xl">10%</span>
+                <Package className="w-6 h-6" />
               </div>
-              <h4 className="font-bold mb-2">Always Discounted</h4>
-              <p className="text-stone-400 text-sm">Enjoy 10% off every recurring delivery, automatically applied.</p>
+              <h4 className="font-bold mb-2">Priority Crafting</h4>
+              <p className="text-stone-400 text-sm">Subscription items are prioritized by our artisans for faster dispatch.</p>
             </div>
             <div>
               <div className="w-12 h-12 bg-zinc-700 rounded-full flex items-center justify-center mx-auto mb-4">
