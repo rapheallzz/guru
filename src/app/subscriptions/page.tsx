@@ -139,7 +139,7 @@ export default function SubscriptionsPage() {
                               </div>
                             </div>
                             <div className="text-right">
-                              <p className="font-bold text-stone-900">£{item.price.toFixed(2)}</p>
+                              <p className="font-bold text-stone-900">₦{item.price.toFixed(2)}</p>
                               <p className="text-[10px] text-stone-400 italic">Per delivery</p>
                             </div>
                           </div>

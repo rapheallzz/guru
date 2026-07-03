@@ -90,8 +90,8 @@ function ShopContent() {
                   className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-zinc-700"
                 />
                 <div className="flex justify-between text-xs text-stone-500 font-medium">
-                  <span>£0</span>
-                  <span>Up to £{priceRange[1]}</span>
+                  <span>₦0</span>
+                  <span>Up to ₦{priceRange[1]}</span>
                 </div>
               </div>
             </div>

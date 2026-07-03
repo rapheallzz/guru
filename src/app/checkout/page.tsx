@@ -85,7 +85,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between mt-4 pt-4 border-t border-stone-200">
                     <span className="text-stone-900 font-bold">Total Amount:</span>
-                    <span className="text-xl font-black text-zinc-700">£{total.toFixed(2)}</span>
+                    <span className="text-xl font-black text-zinc-700">₦{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function CheckoutPage() {
                     type="submit"
                     className="w-full bg-stone-900 text-white font-bold py-4 rounded-md hover:bg-zinc-700 transition-all shadow-lg shadow-stone-900/10"
                   >
-                    {paymentMethod === 'card' ? `Pay £${total.toFixed(2)}` : 'Place Order'}
+                    {paymentMethod === 'card' ? `Pay ₦${total.toFixed(2)}` : 'Place Order'}
                   </button>
                 </div>
               </form>
@@ -327,7 +327,7 @@ export default function CheckoutPage() {
                         )}
                       </div>
                     </div>
-                    <span className="text-sm font-bold text-stone-900">£{(item.price * item.quantity).toFixed(2)}</span>
+                    <span className="text-sm font-bold text-stone-900">₦{(item.price * item.quantity).toFixed(2)}</span>
                   </li>
                 ))}
               </ul>
@@ -350,15 +350,15 @@ export default function CheckoutPage() {
 
                 <div className="flex justify-between text-sm text-stone-500">
                   <span>Subtotal</span>
-                  <span>£{totalPrice.toFixed(2)}</span>
+                  <span>₦{totalPrice.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm text-stone-500">
                   <span>Shipping</span>
-                  <span>{shipping === 0 ? 'FREE' : `£${shipping.toFixed(2)}`}</span>
+                  <span>{shipping === 0 ? 'FREE' : `₦${shipping.toFixed(2)}`}</span>
                 </div>
                 <div className="flex justify-between text-xl font-bold text-stone-900 pt-3">
                   <span>Total</span>
-                  <span>£{total.toFixed(2)}</span>
+                  <span>₦{total.toFixed(2)}</span>
                 </div>
               </div>
             </div>

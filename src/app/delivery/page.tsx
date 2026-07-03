@@ -23,8 +23,8 @@ export default function DeliveryPage() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-stone-900 mb-2">Shipping Rates</h3>
-                <p className="text-stone-600 mb-2"><strong>Standard UK Delivery:</strong> £4.95</p>
-                <p className="text-stone-600"><strong>Orders over £50:</strong> FREE</p>
+                <p className="text-stone-600 mb-2"><strong>Standard UK Delivery:</strong> ₦4.95</p>
+                <p className="text-stone-600"><strong>Orders over ₦50:</strong> FREE</p>
                 <p className="text-sm text-stone-400 mt-2">Currently, we only ship within the United Kingdom. International shipping options coming soon.</p>
               </div>
             </div>

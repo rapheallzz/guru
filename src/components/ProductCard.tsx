@@ -61,6 +61,10 @@ export function ProductCard({ product }: { product: Product }) {
           </h3>
         </Link>
 
+        <p className="text-stone-900 font-bold mb-2">
+          ₦{product.price.toFixed(2)}
+        </p>
+
         <p className="text-stone-600 text-sm line-clamp-2 h-10">
           {product.description}
         </p>
