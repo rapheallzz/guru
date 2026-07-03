@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ShoppingCart, Heart } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Product } from '@/data/types';
 import { useStore } from '@/hooks/useStore';
 import { cn } from '@/utils/cn';
@@ -13,16 +14,27 @@ export function ProductCard({ product }: { product: Product }) {
   const inWishlist = isInWishlist(product.id);
 
   return (
-    <div className="group relative bg-white border border-stone-100 rounded-lg overflow-hidden transition-all hover:shadow-md">
+    <motion.div
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="group relative bg-white border border-stone-100 rounded-lg overflow-hidden hover:shadow-md"
+    >
       <Link href={`/product/${product.id}`} className="block relative aspect-square overflow-hidden bg-stone-100">
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="relative w-full h-full"
+        >
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            fill
+            className="object-cover"
+          />
+        </motion.div>
         {product.inventory === 0 && (
-          <div className="absolute top-2 left-2 bg-stone-900/80 text-white text-[10px] uppercase font-bold px-2 py-1 rounded">
+          <div className="absolute top-2 left-2 z-10 bg-stone-900/80 text-white text-[10px] uppercase font-bold px-2 py-1 rounded">
             Made to Order
           </div>
         )}
@@ -53,6 +65,6 @@ export function ProductCard({ product }: { product: Product }) {
           {product.description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
