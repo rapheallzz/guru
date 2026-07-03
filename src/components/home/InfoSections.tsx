@@ -40,8 +40,8 @@ export function InfoSections() {
               className="relative aspect-video lg:aspect-square overflow-hidden rounded-2xl shadow-xl mb-12 lg:mb-0"
             >
               <Image
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1000"
-                alt="Artisan at work"
+                src="/images/blog-crafting.jpeg"
+                alt="Artisan crafting a handmade piece"
                 fill
                 className="object-cover"
               />

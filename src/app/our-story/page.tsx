@@ -22,8 +22,8 @@ export default function OurStoryPage() {
             </p>
             <div className="relative h-96 mb-12 rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1552033349-2df701f17379?auto=format&fit=crop&q=80&w=2000"
-                alt="Pottery workshop"
+                src="/images/ceramic-vase.jpeg"
+                alt="Handmade ceramic vase"
                 fill
                 className="object-cover"
               />
