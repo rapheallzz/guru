@@ -8,7 +8,7 @@ export const products: Product[] = [
     price: 45.00,
     category: 'Craft Works',
     images: [
-      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=1000',
+      '/images/ceramic-vase.jpeg',
       'https://images.unsplash.com/photo-1590642916589-592bca10dfbf?auto=format&fit=crop&q=80&w=1000'
     ],
     inventory: 12,
@@ -34,7 +34,7 @@ export const products: Product[] = [
     price: 18.00,
     category: 'LED Lights',
     images: [
-      'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=1000',
+      '/images/led-string.jpeg',
       'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=1000'
     ],
     inventory: 50,
@@ -59,7 +59,7 @@ export const products: Product[] = [
     price: 35.00,
     category: 'Craft Works',
     images: [
-      'https://images.unsplash.com/photo-1563452675059-ca1e27094200?auto=format&fit=crop&q=80&w=1000'
+      '/images/wooden-plaque.jpeg'
     ],
     inventory: 0, // Made to order
     rating: 5.0,
@@ -78,7 +78,7 @@ export const products: Product[] = [
     price: 65.00,
     category: 'LED Lights',
     images: [
-      'https://images.unsplash.com/photo-1446071103084-c257b5f70672?auto=format&fit=crop&q=80&w=1000'
+      '/images/led-terrarium.jpeg'
     ],
     inventory: 5,
     rating: 4.9,
@@ -97,7 +97,7 @@ export const products: Product[] = [
     price: 24.00,
     category: 'Merch',
     images: [
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=1000'
+      '/images/linen-tote.jpg'
     ],
     inventory: 25,
     rating: 4.7,
@@ -116,7 +116,7 @@ export const products: Product[] = [
     price: 48.00,
     category: 'Merch',
     images: [
-      'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=1000'
+      '/images/canvas-apron.jpg'
     ],
     inventory: 15,
     rating: 5.0,
@@ -135,7 +135,7 @@ export const products: Product[] = [
     price: 15.00,
     category: 'Merch',
     images: [
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000'
+      '/images/pin-set.jpeg'
     ],
     inventory: 100,
     rating: 4.8,
@@ -154,7 +154,7 @@ export const products: Product[] = [
     price: 55.00,
     category: 'Craft Works',
     images: [
-      'https://images.unsplash.com/photo-1528659203373-ca9813264663?auto=format&fit=crop&q=80&w=1000'
+      '/images/wall-hanging.jpeg'
     ],
     inventory: 8,
     rating: 4.6,
@@ -173,7 +173,7 @@ export const products: Product[] = [
     price: 29.99,
     category: 'LED Lights',
     images: [
-      'https://images.unsplash.com/photo-1589114402662-79354784a0d9?auto=format&fit=crop&q=80&w=1000'
+      '/images/led-magnifier.jpeg'
     ],
     inventory: 15,
     rating: 4.4,
@@ -192,7 +192,7 @@ export const products: Product[] = [
     price: 75.00,
     category: 'Craft Works',
     images: [
-      'https://images.unsplash.com/photo-1565193998772-ef60f187d8af?auto=format&fit=crop&q=80&w=1000'
+      '/images/craft-kit.jpg'
     ],
     inventory: 10,
     rating: 5.0,
@@ -215,7 +215,7 @@ export const products: Product[] = [
     price: 85.00,
     category: 'LED Lights',
     images: [
-      'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=1000'
+      '/images/led-pack.jpeg'
     ],
     inventory: 20,
     rating: 4.9,
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
     content: 'Long form content about crafting...',
     author: 'Elena Smith',
     date: '2025-02-05',
-    image: 'https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?auto=format&fit=crop&q=80&w=1000',
+    image: '/images/blog-crafting.jpeg',
     category: 'Education'
   },
   {
@@ -247,7 +247,7 @@ export const blogPosts: BlogPost[] = [
     content: 'Details about the pottery process...',
     author: 'Elena Smith',
     date: '2025-01-30',
-    image: 'https://images.unsplash.com/photo-1565193998772-ef60f187d8af?auto=format&fit=crop&q=80&w=1000',
+    image: '/images/ceramic-vase.jpeg',
     category: 'Behind the Scenes'
   },
   {
@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
     content: 'LED project ideas...',
     author: 'Marcus Lee',
     date: '2025-01-20',
-    image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=1000',
+    image: '/images/blog-led-ideas.jpeg',
     category: 'Ideas'
   }
 ];
