@@ -2,50 +2,39 @@
 
 import React from 'react';
 import { products } from '@/data/mockData';
-import { ProductCard } from '../ProductCard';
+import { ProductSlider } from './ProductSlider';
 import { motion } from 'framer-motion';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+const titleVariants = {
+  hidden: { opacity: 0, y: -20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
       ease: "easeOut",
     },
   },
 };
 
 export function FeaturedProducts() {
-  const featured = products.filter(p => p.featured).slice(0, 4);
+  const featured = products.filter(p => p.featured);
 
   return (
     <section className="relative z-20 -mt-12 pb-32">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
+          variants={titleVariants}
+          className="mb-10 text-center"
         >
-          {featured.map(product => (
-            <motion.div key={product.id} variants={itemVariants}>
-              <ProductCard product={product} />
-            </motion.div>
-          ))}
+          <h2 className="text-3xl font-bold text-stone-900 mb-2">Featured Creations</h2>
+          <p className="text-stone-600">Hand-picked favorites from our latest collections</p>
         </motion.div>
+
+        <ProductSlider products={featured} />
       </div>
     </section>
   );

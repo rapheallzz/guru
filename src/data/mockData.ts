@@ -102,6 +102,7 @@ export const products: Product[] = [
     inventory: 25,
     rating: 4.7,
     reviews: [],
+    featured: true,
     details: {
       materials: '100% Organic Linen',
       dimensions: '40cm x 35cm',
@@ -120,6 +121,7 @@ export const products: Product[] = [
     inventory: 15,
     rating: 5.0,
     reviews: [],
+    featured: true,
     details: {
       materials: 'Waxed Cotton Canvas, Leather straps',
       dimensions: 'One size fits all',
@@ -138,6 +140,7 @@ export const products: Product[] = [
     inventory: 100,
     rating: 4.8,
     reviews: [],
+    featured: true,
     details: {
       materials: 'Zinc Alloy, Hard Enamel',
       dimensions: '2.5cm each',
@@ -156,6 +159,7 @@ export const products: Product[] = [
     inventory: 8,
     rating: 4.6,
     reviews: [],
+    featured: true,
     details: {
       materials: 'Recycled cotton cord, Driftwood',
       dimensions: 'W: 50cm, L: 80cm',
@@ -174,6 +178,7 @@ export const products: Product[] = [
     inventory: 15,
     rating: 4.4,
     reviews: [],
+    featured: true,
     details: {
       materials: 'Plastic frame, Glass lens, LED ring',
       dimensions: 'Lens diameter: 10cm',
@@ -192,6 +197,7 @@ export const products: Product[] = [
     inventory: 10,
     rating: 5.0,
     reviews: [],
+    featured: true,
     variants: [
       { name: 'Vase Choice', options: ['Speckled White', 'Sage Green', 'Deep Blue'] },
       { name: 'Tool Set', options: ['Beginner Essentials', 'Detailing Pro'] }
@@ -214,6 +220,7 @@ export const products: Product[] = [
     inventory: 20,
     rating: 4.9,
     reviews: [],
+    featured: true,
     details: {
       materials: 'Various',
       dimensions: 'N/A',
