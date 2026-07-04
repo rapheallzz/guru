@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Leaf, Award, ShoppingBag, MessageSquare } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
+import ProductMarquee from './ProductMarquee';
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -66,6 +67,8 @@ export function InfoSections() {
           </div>
         </div>
       </section>
+
+      <ProductMarquee />
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
