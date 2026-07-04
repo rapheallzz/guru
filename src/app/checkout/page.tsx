@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { cn } from '@/utils/cn';
 
 export default function CheckoutPage() {
-  const { cart, totalPrice, clearCart } = useStore();
+  const { cart, clearCart } = useStore();
   const [formData, setFormData] = useState({
     email: '',
     firstName: '',
@@ -23,9 +23,6 @@ export default function CheckoutPage() {
   const [isCompleted, setIsCompleted] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'bank'>('card');
 
-  const shipping = totalPrice >= 50 ? 0 : 4.95;
-  const total = totalPrice + shipping;
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -35,7 +32,6 @@ export default function CheckoutPage() {
       id: Math.random().toString(36).substr(2, 9),
       date: new Date().toISOString(),
       items: cart,
-      total: total,
       email: formData.email,
       status: paymentMethod === 'card' ? 'Paid' : 'Pending Payment'
     };

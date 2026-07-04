@@ -7,7 +7,7 @@ import { useStore } from '@/hooks/useStore';
 import { Trash2, Minus, Plus, ShoppingBag, ArrowRight, RefreshCw } from 'lucide-react';
 
 export default function CartPage() {
-  const { cart, removeFromCart, updateQuantity, totalPrice } = useStore();
+  const { cart, removeFromCart, updateQuantity } = useStore();
 
   if (cart.length === 0) {
     return (
