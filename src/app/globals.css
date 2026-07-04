@@ -29,3 +29,16 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 50s linear infinite;
+}

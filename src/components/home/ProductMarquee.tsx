@@ -25,7 +25,7 @@ const ProductMarquee = () => {
               className="relative flex-shrink-0 w-[300px] md:w-[450px] h-[400px] md:h-[550px] group/item overflow-hidden"
             >
               <Image
-                src={product.image}
+                src={product.images[0]}
                 alt={product.name}
                 fill
                 className="object-cover transition-transform duration-700 group-hover/item:scale-110"
@@ -52,20 +52,6 @@ const ProductMarquee = () => {
           ))}
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.3333%);
-          }
-        }
-        .marquee-track {
-          animation: marquee 50s linear infinite;
-        }
-      `}</style>
     </section>
   );
 };
