@@ -11,11 +11,14 @@ import { useRouter } from 'next/navigation';
 const navigation = [
   { name: 'Home', href: '/' },
   {
-    name: 'Shop All',
+    name: 'Services',
     href: '/shop',
     subItems: [
-      { name: 'Craft Works', href: '/shop?category=Craft+Works' },
-      { name: 'LED Lights', href: '/shop?category=LED+Lights' },
+      { name: 'Wall & Art Decor', href: '/shop?category=Wall+%26+Art+Decor' },
+      { name: '3D Textured Artwork', href: '/shop?category=3D+Textured+Artwork' },
+      { name: 'Interior Design Pieces', href: '/shop?category=Interior+Design+Pieces' },
+      { name: 'Commercial & Residential', href: '/shop?category=Commercial+%26+Residential' },
+      { name: 'Custom Commissions', href: '/custom-requests' },
     ]
   },
   {

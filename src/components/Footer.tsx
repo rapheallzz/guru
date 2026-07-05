@@ -31,12 +31,14 @@ export function Footer() {
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Shop</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Services</h3>
                 <ul className="mt-4 space-y-4">
-                  <li><Link href="/shop" className="text-sm hover:text-white transition-colors">Shop All</Link></li>
-                  <li><Link href="/shop?category=Craft+Works" className="text-sm hover:text-white transition-colors">Craft Works</Link></li>
-                  <li><Link href="/shop?category=LED+Lights" className="text-sm hover:text-white transition-colors">LED Lights</Link></li>
-                  <li><Link href="/custom-requests" className="text-sm hover:text-white transition-colors">Custom Requests</Link></li>
+                  <li><Link href="/shop" className="text-sm hover:text-white transition-colors">Our Services</Link></li>
+                  <li><Link href="/shop?category=Wall+%26+Art+Decor" className="text-sm hover:text-white transition-colors">Wall & Art Decor</Link></li>
+                  <li><Link href="/shop?category=3D+Textured+Artwork" className="text-sm hover:text-white transition-colors">3D Textured Artwork</Link></li>
+                  <li><Link href="/shop?category=Interior+Design+Pieces" className="text-sm hover:text-white transition-colors">Interior Design Pieces</Link></li>
+                  <li><Link href="/shop?category=Commercial+%26+Residential" className="text-sm hover:text-white transition-colors">Commercial & Residential</Link></li>
+                  <li><Link href="/custom-requests" className="text-sm hover:text-white transition-colors">Custom Commissions</Link></li>
                   <li><Link href="/merch" className="text-sm hover:text-white transition-colors">Merch</Link></li>
                 </ul>
               </div>

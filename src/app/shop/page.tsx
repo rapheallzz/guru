@@ -24,7 +24,15 @@ function ShopContent() {
   const [sortBy, setSortBy] = useState('Featured');
   const [showFilters, setShowFilters] = useState(false);
 
-  const categories = ['All', 'Craft Works', 'LED Lights', 'Merch'];
+  const categories = [
+    'All',
+    'Wall & Art Decor',
+    '3D Textured Artwork',
+    'Interior Design Pieces',
+    'Commercial & Residential',
+    'Custom Commissions',
+    'Merch'
+  ];
 
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
@@ -44,9 +52,9 @@ function ShopContent() {
       {/* Header */}
       <div className="bg-stone-50 border-b border-stone-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-stone-900 mb-4 uppercase tracking-tight">Shop All</h1>
+          <h1 className="text-4xl font-bold text-stone-900 mb-4 uppercase tracking-tight">Our Services</h1>
           <p className="text-stone-600 max-w-2xl">
-            Explore our complete collection of handmade crafts and unique LED creations. Every piece is curated for quality and character.
+            Explore our specialized art and design services. From custom commissions to large-scale residential and commercial projects, we bring unique vision to every piece.
           </p>
         </div>
       </div>
@@ -83,7 +91,7 @@ function ShopContent() {
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
                 <input
                   type="text"
-                  placeholder="Search products..."
+                  placeholder="Search our work..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-stone-200 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-500 transition-all"
@@ -145,7 +153,7 @@ function ShopContent() {
               </div>
             ) : (
               <div className="text-center py-20">
-                <p className="text-xl text-stone-500">No products found matching your criteria.</p>
+                <p className="text-xl text-stone-500">No projects found matching your criteria.</p>
                 <button
                   onClick={() => {
                     setSearchQuery('');

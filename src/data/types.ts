@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-  category: 'Craft Works' | 'LED Lights' | 'Merch';
+  category: 'Wall & Art Decor' | '3D Textured Artwork' | 'Interior Design Pieces' | 'Commercial & Residential' | 'Custom Commissions' | 'Merch';
   images: string[];
   variants?: {
     name: string;

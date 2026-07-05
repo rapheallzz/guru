@@ -6,7 +6,7 @@ export const products: Product[] = [
     name: 'Hand-Thrown Speckled Vase',
     description: 'A beautiful, unique hand-thrown stoneware vase with a natural speckled glaze. Perfect for showcasing seasonal blooms.',
     price: 45.00,
-    category: 'Craft Works',
+    category: 'Interior Design Pieces',
     images: [
       '/images/ceramic-vase.jpeg',
       'https://images.unsplash.com/photo-1590642916589-592bca10dfbf?auto=format&fit=crop&q=80&w=1000'
@@ -32,7 +32,7 @@ export const products: Product[] = [
     name: 'Warm Glow LED String Lights',
     description: 'Delicate copper wire string lights that create a cozy atmosphere in any room. Perfect for craft projects or home decor.',
     price: 18.00,
-    category: 'LED Lights',
+    category: 'Interior Design Pieces',
     images: [
       '/images/led-string.jpeg',
       'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=1000'
@@ -57,7 +57,7 @@ export const products: Product[] = [
     name: 'Custom Engraved Wooden Plaque',
     description: 'Personalized wooden plaques crafted from sustainable oak. Perfect for gifts, housewarmings, or memorial pieces.',
     price: 35.00,
-    category: 'Craft Works',
+    category: 'Custom Commissions',
     images: [
       '/images/wooden-plaque.jpeg'
     ],
@@ -76,7 +76,7 @@ export const products: Product[] = [
     name: 'Illuminated Glass Terrarium',
     description: 'A handcrafted glass terrarium featuring an integrated LED base that highlights your favorite succulents.',
     price: 65.00,
-    category: 'LED Lights',
+    category: 'Interior Design Pieces',
     images: [
       '/images/led-terrarium.jpeg'
     ],
@@ -122,11 +122,7 @@ export const products: Product[] = [
     rating: 5.0,
     reviews: [],
     featured: true,
-    details: {
-      materials: 'Waxed Cotton Canvas, Leather straps',
-      dimensions: 'One size fits all',
-      care: 'Spot clean only. Do not wash.'
-    }
+    details: { materials: 'Waxed Cotton Canvas, Leather straps', dimensions: 'One size fits all', care: 'Spot clean only. Do not wash.' }
   },
   {
     id: '11',
@@ -141,18 +137,14 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: [],
     featured: true,
-    details: {
-      materials: 'Zinc Alloy, Hard Enamel',
-      dimensions: '2.5cm each',
-      care: 'Keep dry.'
-    }
+    details: { materials: 'Zinc Alloy, Hard Enamel', dimensions: '2.5cm each', care: 'Keep dry.' }
   },
   {
     id: '6',
     name: 'Woven Wall Hanging',
     description: 'Intricate macramé wall art handcrafted using recycled cotton cord. Adds texture and warmth to any wall.',
     price: 55.00,
-    category: 'Craft Works',
+    category: 'Wall & Art Decor',
     images: [
       '/images/wall-hanging.jpeg'
     ],
@@ -171,7 +163,7 @@ export const products: Product[] = [
     name: 'LED Craft Magnifier',
     description: 'High-quality magnifying glass with built-in daylight LEDs. Essential for detailed craft work and hobbyists.',
     price: 29.99,
-    category: 'LED Lights',
+    category: 'Commercial & Residential',
     images: [
       '/images/led-magnifier.jpeg'
     ],
@@ -190,7 +182,7 @@ export const products: Product[] = [
     name: 'Mixed Craft Starter Kit',
     description: 'Build your own starter kit! Choose your favorite vase and tool set. Perfect for those beginning their pottery journey.',
     price: 75.00,
-    category: 'Craft Works',
+    category: '3D Textured Artwork',
     images: [
       '/images/craft-kit.jpg'
     ],
@@ -213,7 +205,7 @@ export const products: Product[] = [
     name: 'LED Decor Pack (Fixed Bundle)',
     description: 'A pre-curated set of our best-selling LED items: includes 2x Warm Glow String Lights and 1x Glass Terrarium.',
     price: 85.00,
-    category: 'LED Lights',
+    category: 'Interior Design Pieces',
     images: [
       '/images/led-pack.jpeg'
     ],
