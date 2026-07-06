@@ -54,7 +54,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-stone-900">Email Us</h3>
-                  <p className="text-stone-600">hello@gurunetwork.com</p>
+                  <p className="text-stone-600">hello@kraftminds.com</p>
                   <p className="text-sm text-stone-400">Response within 24 hours</p>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-stone-900">Call Us</h3>
-                  <p className="text-stone-600">0333 123 4567</p>
+                  <p className="text-stone-600">+234 708 020 8718</p>
                   <p className="text-sm text-stone-400">Mon-Fri, 9am - 5pm</p>
                 </div>
               </div>

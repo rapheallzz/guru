@@ -24,7 +24,9 @@ export function Footer() {
             </p>
             <div className="flex space-x-6">
               <a href="#" className="hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/kraftminds_byguru/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
               <a href="#" className="hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
             </div>
           </div>
@@ -57,7 +59,7 @@ export function Footer() {
                 <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Contact</h3>
                 <ul className="mt-4 space-y-4">
                   <li className="flex items-center text-sm"><MapPin className="w-4 h-4 mr-2" /> 123 Artisan Way, Kraft City</li>
-                  <li className="flex items-center text-sm"><Phone className="w-4 h-4 mr-2" /> 0333 123 4567</li>
+                  <li className="flex items-center text-sm"><Phone className="w-4 h-4 mr-2" /> +234 708 020 8718</li>
                   <li className="flex items-center text-sm"><Mail className="w-4 h-4 mr-2" /> hello@kraftminds.com</li>
                 </ul>
               </div>
